@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WGUC968.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WGUC968
 {
@@ -18,6 +19,7 @@ namespace WGUC968
             InitializeComponent();
         }
 
+        public Part NewPart { get; private set; }
         //this is the cancel button
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,6 +56,90 @@ namespace WGUC968
 
         //this is the save button
         private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Collect input data
+                int id = int.Parse(idBox.Text);
+                string name = nameBox.Text;
+                decimal price = decimal.Parse(priceBox.Text);
+                int stock = int.Parse(inventoryBox.Text);
+                int min = int.Parse(minBox.Text);
+                int max = int.Parse(maxBox.Text);
+
+                if (min > max)
+                {
+                    MessageBox.Show("Min cannot be greater than Max.");
+                    return;
+                }
+
+                if (stock < min || stock > max)
+                {
+                    MessageBox.Show("Inventory must be within Min and Max bounds.");
+                    return;
+                }
+
+                if (inHouseRadioButton.Checked) // Inhouse
+                {
+                    int machineID = int.Parse(machineOrCompanyBox.Text);
+                    NewPart = new Inhouse(id, name, price, stock, min, max, machineID);
+                }
+                else if (outsourcedRadioButton.Checked) // Outsourced
+                {
+                    string companyName = machineOrCompanyBox.Text;
+                    NewPart = new Outsourced(id, name, price, stock, min, max, companyName);
+                }   
+                else
+                {
+                    MessageBox.Show("Please select a part type.");
+                    return;
+                }
+
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void AddPart_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventoryBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void priceBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maxBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void machineOrCompanyBox_TextChanged(object sender, EventArgs e)
         {
 
         }

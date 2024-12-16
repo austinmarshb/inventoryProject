@@ -30,22 +30,22 @@ namespace WGUC968
         /// </summary>
         private void InitializeComponent()
         {
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            textBox1 = new TextBox();
+            inHouseRadioButton = new RadioButton();
+            outsourcedRadioButton = new RadioButton();
+            idBox = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            nameBox = new TextBox();
+            inventoryBox = new TextBox();
+            priceBox = new TextBox();
+            machineOrCompanyBox = new TextBox();
+            maxBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox7 = new TextBox();
+            minBox = new TextBox();
             label8 = new Label();
             label9 = new Label();
             button1 = new Button();
@@ -53,39 +53,39 @@ namespace WGUC968
             label11 = new Label();
             SuspendLayout();
             // 
-            // radioButton1
+            // inHouseRadioButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(175, 96);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(91, 25);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "In-House";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            inHouseRadioButton.AutoSize = true;
+            inHouseRadioButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            inHouseRadioButton.Location = new Point(175, 96);
+            inHouseRadioButton.Name = "inHouseRadioButton";
+            inHouseRadioButton.Size = new Size(91, 25);
+            inHouseRadioButton.TabIndex = 0;
+            inHouseRadioButton.TabStop = true;
+            inHouseRadioButton.Text = "In-House";
+            inHouseRadioButton.UseVisualStyleBackColor = true;
+            inHouseRadioButton.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // radioButton2
+            // outsourcedRadioButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton2.Location = new Point(289, 96);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(109, 25);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Outsourced";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            outsourcedRadioButton.AutoSize = true;
+            outsourcedRadioButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            outsourcedRadioButton.Location = new Point(289, 96);
+            outsourcedRadioButton.Name = "outsourcedRadioButton";
+            outsourcedRadioButton.Size = new Size(109, 25);
+            outsourcedRadioButton.TabIndex = 1;
+            outsourcedRadioButton.TabStop = true;
+            outsourcedRadioButton.Text = "Outsourced";
+            outsourcedRadioButton.UseVisualStyleBackColor = true;
+            outsourcedRadioButton.CheckedChanged += radioButton2_CheckedChanged;
             // 
-            // textBox1
+            // idBox
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(210, 143);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(166, 29);
-            textBox1.TabIndex = 2;
+            idBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            idBox.Location = new Point(210, 143);
+            idBox.Name = "idBox";
+            idBox.Size = new Size(166, 29);
+            idBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -94,45 +94,45 @@ namespace WGUC968
             label1.Size = new Size(100, 23);
             label1.TabIndex = 21;
             // 
-            // textBox2
+            // nameBox
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(210, 178);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 29);
-            textBox2.TabIndex = 4;
+            nameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameBox.Location = new Point(210, 178);
+            nameBox.Name = "nameBox";
+            nameBox.Size = new Size(166, 29);
+            nameBox.TabIndex = 4;
             // 
-            // textBox3
+            // inventoryBox
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(210, 213);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(166, 29);
-            textBox3.TabIndex = 5;
+            inventoryBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            inventoryBox.Location = new Point(210, 213);
+            inventoryBox.Name = "inventoryBox";
+            inventoryBox.Size = new Size(166, 29);
+            inventoryBox.TabIndex = 5;
             // 
-            // textBox4
+            // priceBox
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(210, 248);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(166, 29);
-            textBox4.TabIndex = 6;
+            priceBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            priceBox.Location = new Point(210, 248);
+            priceBox.Name = "priceBox";
+            priceBox.Size = new Size(166, 29);
+            priceBox.TabIndex = 6;
             // 
-            // textBox5
+            // machineOrCompanyBox
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(210, 318);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(166, 29);
-            textBox5.TabIndex = 7;
+            machineOrCompanyBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            machineOrCompanyBox.Location = new Point(210, 318);
+            machineOrCompanyBox.Name = "machineOrCompanyBox";
+            machineOrCompanyBox.Size = new Size(166, 29);
+            machineOrCompanyBox.TabIndex = 7;
             // 
-            // textBox6
+            // maxBox
             // 
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(210, 283);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(56, 29);
-            textBox6.TabIndex = 8;
+            maxBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maxBox.Location = new Point(320, 285);
+            maxBox.Name = "maxBox";
+            maxBox.Size = new Size(56, 29);
+            maxBox.TabIndex = 8;
             // 
             // label2
             // 
@@ -180,7 +180,7 @@ namespace WGUC968
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(165, 286);
+            label6.Location = new Point(275, 288);
             label6.Name = "label6";
             label6.Size = new Size(39, 21);
             label6.TabIndex = 13;
@@ -190,19 +190,19 @@ namespace WGUC968
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(277, 286);
+            label7.Location = new Point(167, 288);
             label7.Name = "label7";
             label7.Size = new Size(37, 21);
             label7.TabIndex = 14;
             label7.Text = "Min";
             // 
-            // textBox7
+            // minBox
             // 
-            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(320, 283);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(56, 29);
-            textBox7.TabIndex = 15;
+            minBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            minBox.Location = new Point(210, 285);
+            minBox.Name = "minBox";
+            minBox.Size = new Size(56, 29);
+            minBox.TabIndex = 15;
             // 
             // label8
             // 
@@ -264,22 +264,22 @@ namespace WGUC968
             Controls.Add(button1);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox7);
+            Controls.Add(minBox);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(maxBox);
+            Controls.Add(machineOrCompanyBox);
+            Controls.Add(priceBox);
+            Controls.Add(inventoryBox);
+            Controls.Add(nameBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(idBox);
+            Controls.Add(outsourcedRadioButton);
+            Controls.Add(inHouseRadioButton);
             Name = "ModifyPart";
             Text = "Modify Part";
             Load += ModifyPart_Load;
@@ -289,22 +289,22 @@ namespace WGUC968
 
         #endregion
 
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private TextBox textBox1;
+        private RadioButton inHouseRadioButton;
+        private RadioButton outsourcedRadioButton;
+        private TextBox idBox;
         private Label label1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox nameBox;
+        private TextBox inventoryBox;
+        private TextBox priceBox;
+        private TextBox machineOrCompanyBox;
+        private TextBox maxBox;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox minBox;
         private Label label8;
         private Label label9;
         private Button button1;

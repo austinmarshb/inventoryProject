@@ -54,7 +54,7 @@ namespace WGUC968
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (inHouseRadioButton.Checked)
             {
                 label8.Text = "         Machine ID";
             }
@@ -62,7 +62,7 @@ namespace WGUC968
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
+            if (outsourcedRadioButton.Checked)
             {
                 label8.Text = "Company Name";
             }

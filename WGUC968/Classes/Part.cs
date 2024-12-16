@@ -25,6 +25,8 @@ namespace WGUC968.Classes
             Max = max;
         }
 
+        public Part NewPart { get; private set; }
+
         //for testing, remove later
         public abstract void DisplayInfo();
     }

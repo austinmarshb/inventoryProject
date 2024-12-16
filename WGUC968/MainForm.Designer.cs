@@ -49,7 +49,9 @@ namespace WGUC968
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label4 = new Label();
-            button10 = new Button();
+            clearPartSearch = new Button();
+            clearProductSearch = new Button();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -127,14 +129,14 @@ namespace WGUC968
             // 
             // productSearchBox
             // 
-            productSearchBox.Location = new Point(895, 85);
+            productSearchBox.Location = new Point(812, 85);
             productSearchBox.Name = "productSearchBox";
             productSearchBox.Size = new Size(204, 23);
             productSearchBox.TabIndex = 10;
             // 
             // partSearchButton
             // 
-            partSearchButton.Location = new Point(499, 85);
+            partSearchButton.Location = new Point(420, 85);
             partSearchButton.Name = "partSearchButton";
             partSearchButton.Size = new Size(75, 23);
             partSearchButton.TabIndex = 11;
@@ -144,7 +146,7 @@ namespace WGUC968
             // 
             // productSearchButton
             // 
-            productSearchButton.Location = new Point(1105, 84);
+            productSearchButton.Location = new Point(1022, 85);
             productSearchButton.Name = "productSearchButton";
             productSearchButton.Size = new Size(75, 23);
             productSearchButton.TabIndex = 12;
@@ -154,7 +156,7 @@ namespace WGUC968
             // 
             // partSearchBox
             // 
-            partSearchBox.Location = new Point(289, 85);
+            partSearchBox.Location = new Point(210, 85);
             partSearchBox.Name = "partSearchBox";
             partSearchBox.Size = new Size(204, 23);
             partSearchBox.TabIndex = 13;
@@ -239,15 +241,38 @@ namespace WGUC968
             label4.Text = "Inventory Management System";
             label4.Click += label4_Click;
             // 
-            // button10
+            // clearPartSearch
             // 
-            button10.Location = new Point(408, 481);
-            button10.Name = "button10";
-            button10.Size = new Size(75, 23);
-            button10.TabIndex = 22;
-            button10.Text = "TEST";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            clearPartSearch.Location = new Point(499, 85);
+            clearPartSearch.Name = "clearPartSearch";
+            clearPartSearch.Size = new Size(75, 23);
+            clearPartSearch.TabIndex = 23;
+            clearPartSearch.Text = "Clear";
+            clearPartSearch.UseVisualStyleBackColor = true;
+            clearPartSearch.Click += clearPartSearch_Click;
+            // 
+            // clearProductSearch
+            // 
+            clearProductSearch.Location = new Point(1103, 85);
+            clearProductSearch.Name = "clearProductSearch";
+            clearProductSearch.Size = new Size(75, 23);
+            clearProductSearch.TabIndex = 24;
+            clearProductSearch.Text = "Clear";
+            clearProductSearch.UseVisualStyleBackColor = true;
+            clearProductSearch.Click += clearProductSearch_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Bahnschrift Condensed", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ControlLightLight;
+            label5.Location = new Point(710, 405);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 99);
+            label5.TabIndex = 25;
+            label5.Text = "GO\r\nNIGHT\r\nOWLS!";
+            label5.Click += label5_Click;
             // 
             // MainForm
             // 
@@ -255,7 +280,9 @@ namespace WGUC968
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1190, 556);
-            Controls.Add(button10);
+            Controls.Add(label5);
+            Controls.Add(clearProductSearch);
+            Controls.Add(clearPartSearch);
             Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
@@ -304,6 +331,8 @@ namespace WGUC968
         private Label label1;
         private PictureBox pictureBox1;
         private Label label4;
-        private Button button10;
+        private Button clearPartSearch;
+        private Button clearProductSearch;
+        private Label label5;
     }
 }

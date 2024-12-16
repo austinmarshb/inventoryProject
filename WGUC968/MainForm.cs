@@ -16,12 +16,10 @@ namespace WGUC968
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Populate the list with test data
-            partsList.Add(new Inhouse(125, "Sprocket", 100.00m, 10, 1, 100, 123));
-            partsList.Add(new Outsourced(634, "Joint", 150.00m, 5, 1, 50, "Supplier X"));
-            partsList.Add(new Inhouse(221, "Bearing", 200.00m, 20, 1, 100, 456));
+            partsList.Add(new Inhouse(125, "Sprocket", 100.00m, 10, 1, 1232, 123));
+            partsList.Add(new Outsourced(634, "Joint", 150.00m, 5, 1, 322, "Supplier X"));
+            partsList.Add(new Inhouse(221, "Bearing", 200.00m, 20, 1, 2362, 456));
 
-            // Populate the DataGridView
             dataGridView1.Columns.Add("PartID", "Part ID");
             dataGridView1.Columns.Add("Name", "Name");
             dataGridView1.Columns.Add("Price", "Price");
@@ -29,7 +27,6 @@ namespace WGUC968
             dataGridView1.Columns.Add("Min", "Min");
             dataGridView1.Columns.Add("Max", "Max");
 
-            // Add each part to the DataGridView
             foreach (var part in partsList)
             {
                 dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
@@ -37,12 +34,10 @@ namespace WGUC968
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Populate the list with test data
-            productsList.Add(new Product(124, "Gears", 75, 100.00f, 1, 100));
-            productsList.Add(new Product(151, "Belt", 25, 150.00f, 1, 50));
-            productsList.Add(new Product(121, "Hub", 12, 200.00f, 1, 100));
+            productsList.Add(new Product(124, "Gears", 75, 100.00f, 1, 15));
+            productsList.Add(new Product(151, "Belt", 25, 150.00f, 1, 18));
+            productsList.Add(new Product(121, "Hub", 12, 200.00f, 1, 53));
 
-            // Populate the DataGridView
             dataGridView2.Columns.Add("ProductID", "Product ID");
             dataGridView2.Columns.Add("Name", "Name");
             dataGridView2.Columns.Add("Price", "Price");
@@ -50,7 +45,6 @@ namespace WGUC968
             dataGridView2.Columns.Add("Min", "Min");
             dataGridView2.Columns.Add("Max", "Max");
 
-            // Add each part to the DataGridView
             foreach (var product in productsList)
             {
                 dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
@@ -77,25 +71,25 @@ namespace WGUC968
 
         private void button8_Click(object sender, EventArgs e)
         {
-            string searchQuery = partSearchBox.Text.ToLower(); // Get search query and convert it to lowercase
+            string searchQuery = partSearchBox.Text.ToLower();
             var filteredParts = partsList.Where(part =>
-                part.PartID.ToString().Contains(searchQuery) || // Check if the PartID contains the search query
-                part.Name.ToLower().Contains(searchQuery))     // Check if the Name contains the search query
-                .ToList(); // Create a filtered list
+                part.PartID.ToString().Contains(searchQuery) ||
+                part.Name.ToLower().Contains(searchQuery))
+                .ToList();
 
-            // Clear existing rows in DataGridView
             dataGridView1.Rows.Clear();
 
-            // Add the filtered rows back to the DataGridView
             foreach (var part in filteredParts)
             {
                 dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
             }
 
-            // If no results, show a message
             if (filteredParts.Count == 0)
             {
+                RepopulateGridView(partsList);
                 MessageBox.Show("No matching parts found.");
+                this.StartPosition = FormStartPosition.CenterParent;
+                partSearchBox.Clear();
             }
         }
 
@@ -112,10 +106,26 @@ namespace WGUC968
         //add part button
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AddPart addPart = new AddPart();
-            addPart.StartPosition = FormStartPosition.CenterParent;
-            addPart.ShowDialog();
+            using (AddPart addPartForm = new AddPart())
+            {
+                addPartForm.StartPosition = FormStartPosition.CenterParent;
+
+                // Show the AddPart form and check if the user clicked "Save" (DialogResult.OK)
+                if (addPartForm.ShowDialog() == DialogResult.OK)
+                {
+                    // Retrieve the new part from the AddPart form
+                    Part newPart = addPartForm.NewPart;
+
+                    if (newPart != null)
+                    {
+                        // Add the new part to the parts list and the DataGridView
+                        partsList.Add(newPart);
+                        dataGridView1.Rows.Add(newPart.PartID, newPart.Name, newPart.Price, newPart.Stock, newPart.Min, newPart.Max);
+                    }
+                }
+            }
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -173,18 +183,6 @@ namespace WGUC968
         //for testing remove later
         private void button10_Click(object sender, EventArgs e)
         {
-            //// Create an Inhouse part
-            //Inhouse inhousePart = new Inhouse(1, "Inhouse Part", 100.00m, 20, 5, 50, 12345);
-
-            //MessageBox.Show($"Inhouse Part ID: {inhousePart.PartID}, Name: {inhousePart.Name}, Machine ID: {inhousePart.MachineID}");
-            //// Call DisplayInfo for the Inhouse part
-            //inhousePart.DisplayInfo(); // This will show a MessageBox
-
-            //// Create an Outsourced part
-            ////Outsourced outsourcedPart = new Outsourced(2, "Outsourced Part", 150.00m, 10, 3, 30, "XYZ Supplier");
-
-            ////// Call DisplayInfo for the Outsourced part
-            ////outsourcedPart.DisplayInfo(); // This will show a MessageBox
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -210,26 +208,66 @@ namespace WGUC968
 
         private void productSearchButton_Click(object sender, EventArgs e)
         {
-            string searchQuery = productSearchBox.Text.ToLower(); // Get search query and convert it to lowercase
+            string searchQuery = productSearchBox.Text.ToLower();
             var filteredProducts = productsList.Where(part =>
-                part.ProductID.ToString().Contains(searchQuery) || // Check if the PartID contains the search query
-                part.Name.ToLower().Contains(searchQuery))     // Check if the Name contains the search query
-                .ToList(); // Create a filtered list
+                part.ProductID.ToString().Contains(searchQuery) ||
+                part.Name.ToLower().Contains(searchQuery))
+                .ToList();
 
-            // Clear existing rows in DataGridView
             dataGridView2.Rows.Clear();
 
-            // Add the filtered rows back to the DataGridView
             foreach (var product in filteredProducts)
             {
                 dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
             }
 
-            // If no results, show a message
             if (filteredProducts.Count == 0)
             {
                 MessageBox.Show("No matching parts found.");
+                RepopulateGridView(productsList);
+                this.StartPosition = FormStartPosition.CenterParent;
+                productSearchBox.Clear();
             }
+        }
+        private void RepopulateGridView(List<Product> productList)
+        {
+            dataGridView2.Rows.Clear();
+
+            foreach (var product in productList)
+            {
+                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
+            }
+
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void RepopulateGridView(List<Part> partsList)
+        {
+            dataGridView1.Rows.Clear();
+
+            foreach (var part in partsList)
+            {
+                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
+            }
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void clearPartSearch_Click(object sender, EventArgs e)
+        {
+            RepopulateGridView(partsList);
+            partSearchBox.Clear();
+        }
+
+        private void clearProductSearch_Click(object sender, EventArgs e)
+        {
+            RepopulateGridView(productsList);
+            productSearchBox.Clear();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
