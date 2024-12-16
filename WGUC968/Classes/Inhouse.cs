@@ -15,5 +15,12 @@ namespace WGUC968.Classes
         {
             MachineID = machineID;
         }
+
+
+        //for testing, remove later
+        public override void DisplayInfo()
+        {
+            Console.WriteLine($"Inhouse Part ID: {PartID}, Name: {Name}, Machine ID: {MachineID}");
+        }
     }
 }

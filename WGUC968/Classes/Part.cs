@@ -11,18 +11,21 @@ namespace WGUC968.Classes
         public int PartID { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public int InStock { get; set; }
+        public float Stock { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
 
-        protected Part(int partID, string name, decimal price, int inStock, int min, int max)
+        protected Part(int partID, string name, decimal price, float stock, int min, int max)
         {
             PartID = partID;
             Name = name;
             Price = price;
-            InStock = inStock;
+            Stock = stock;
             Min = min;
             Max = max;
         }
+
+        //for testing, remove later
+        public abstract void DisplayInfo();
     }
 }

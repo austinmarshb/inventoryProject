@@ -15,5 +15,11 @@ namespace WGUC968.Classes
         {
             CompanyName = companyName;
         }
+
+        //for testing, remove later
+        public override void DisplayInfo()
+        {
+            Console.WriteLine($"Outsourced Part ID: {PartID}, Name: {Name}, Company: {CompanyName}");
+        }
     }
 }

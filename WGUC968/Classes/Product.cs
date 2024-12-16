@@ -11,10 +11,20 @@ namespace WGUC968.Classes
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int InStock { get; set; }
+        public int Stock { get; set; }
+        public float Price { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
+
+        public Product(int partID, string name, int stock, float price, int min, int max)
+        {
+            ProductID = partID;
+            Name = name;
+            Stock = stock;
+            Price = price;
+            Min = min;
+            Max = max;
+        }
 
         public BindingList<Part> AssociatedParts { get; set; } = new BindingList<Part>();
 

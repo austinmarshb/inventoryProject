@@ -33,21 +33,23 @@ namespace WGUC968
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            deletePartButton = new Button();
             button6 = new Button();
             button4 = new Button();
-            button5 = new Button();
+            deleteProductButton = new Button();
             button7 = new Button();
-            textBox2 = new TextBox();
-            button8 = new Button();
-            button9 = new Button();
-            textBox1 = new TextBox();
+            productSearchBox = new TextBox();
+            partSearchButton = new Button();
+            productSearchButton = new Button();
+            partSearchBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            label4 = new Label();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -73,15 +75,15 @@ namespace WGUC968
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // deletePartButton
             // 
-            button3.Location = new Point(468, 368);
-            button3.Name = "button3";
-            button3.Size = new Size(106, 45);
-            button3.TabIndex = 4;
-            button3.Text = "Delete Part";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            deletePartButton.Location = new Point(468, 368);
+            deletePartButton.Name = "deletePartButton";
+            deletePartButton.Size = new Size(106, 45);
+            deletePartButton.TabIndex = 4;
+            deletePartButton.Text = "Delete Part";
+            deletePartButton.UseVisualStyleBackColor = true;
+            deletePartButton.Click += button3_Click;
             // 
             // button6
             // 
@@ -103,14 +105,15 @@ namespace WGUC968
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // button5
+            // deleteProductButton
             // 
-            button5.Location = new Point(1074, 368);
-            button5.Name = "button5";
-            button5.Size = new Size(106, 45);
-            button5.TabIndex = 7;
-            button5.Text = "Delete Product";
-            button5.UseVisualStyleBackColor = true;
+            deleteProductButton.Location = new Point(1074, 368);
+            deleteProductButton.Name = "deleteProductButton";
+            deleteProductButton.Size = new Size(106, 45);
+            deleteProductButton.TabIndex = 7;
+            deleteProductButton.Text = "Delete Product";
+            deleteProductButton.UseVisualStyleBackColor = true;
+            deleteProductButton.Click += button5_Click;
             // 
             // button7
             // 
@@ -122,38 +125,39 @@ namespace WGUC968
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
-            // textBox2
+            // productSearchBox
             // 
-            textBox2.Location = new Point(895, 85);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(204, 23);
-            textBox2.TabIndex = 10;
+            productSearchBox.Location = new Point(895, 85);
+            productSearchBox.Name = "productSearchBox";
+            productSearchBox.Size = new Size(204, 23);
+            productSearchBox.TabIndex = 10;
             // 
-            // button8
+            // partSearchButton
             // 
-            button8.Location = new Point(499, 85);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 23);
-            button8.TabIndex = 11;
-            button8.Text = "Search";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            partSearchButton.Location = new Point(499, 85);
+            partSearchButton.Name = "partSearchButton";
+            partSearchButton.Size = new Size(75, 23);
+            partSearchButton.TabIndex = 11;
+            partSearchButton.Text = "Search";
+            partSearchButton.UseVisualStyleBackColor = true;
+            partSearchButton.Click += button8_Click;
             // 
-            // button9
+            // productSearchButton
             // 
-            button9.Location = new Point(1105, 84);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 12;
-            button9.Text = "Search";
-            button9.UseVisualStyleBackColor = true;
+            productSearchButton.Location = new Point(1105, 84);
+            productSearchButton.Name = "productSearchButton";
+            productSearchButton.Size = new Size(75, 23);
+            productSearchButton.TabIndex = 12;
+            productSearchButton.Text = "Search";
+            productSearchButton.UseVisualStyleBackColor = true;
+            productSearchButton.Click += productSearchButton_Click;
             // 
-            // textBox1
+            // partSearchBox
             // 
-            textBox1.Location = new Point(289, 85);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(204, 23);
-            textBox1.TabIndex = 13;
+            partSearchBox.Location = new Point(289, 85);
+            partSearchBox.Name = "partSearchBox";
+            partSearchBox.Size = new Size(204, 23);
+            partSearchBox.TabIndex = 13;
             // 
             // label2
             // 
@@ -196,6 +200,7 @@ namespace WGUC968
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(562, 248);
             dataGridView2.TabIndex = 18;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label1
             // 
@@ -221,27 +226,52 @@ namespace WGUC968
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Snow;
+            label4.Location = new Point(420, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(348, 32);
+            label4.TabIndex = 21;
+            label4.Text = "Inventory Management System";
+            label4.Click += label4_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(408, 481);
+            button10.Name = "button10";
+            button10.Size = new Size(75, 23);
+            button10.TabIndex = 22;
+            button10.Text = "TEST";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1190, 556);
+            Controls.Add(button10);
+            Controls.Add(label4);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(textBox2);
+            Controls.Add(partSearchBox);
+            Controls.Add(productSearchButton);
+            Controls.Add(partSearchButton);
+            Controls.Add(productSearchBox);
             Controls.Add(button7);
-            Controls.Add(button5);
+            Controls.Add(deleteProductButton);
             Controls.Add(button4);
             Controls.Add(button6);
-            Controls.Add(button3);
+            Controls.Add(deletePartButton);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "MainForm";
@@ -258,20 +288,22 @@ namespace WGUC968
 
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button deletePartButton;
         private Button button6;
         private Button button4;
-        private Button button5;
+        private Button deleteProductButton;
         private Button button7;
-        private TextBox textBox2;
-        private Button button8;
-        private Button button9;
-        private TextBox textBox1;
+        private TextBox productSearchBox;
+        private Button partSearchButton;
+        private Button productSearchButton;
+        private TextBox partSearchBox;
         private Label label2;
         private Label label3;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private Label label1;
         private PictureBox pictureBox1;
+        private Label label4;
+        private Button button10;
     }
 }

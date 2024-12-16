@@ -32,25 +32,27 @@ namespace WGUC968
         {
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            textBox7 = new TextBox();
+            minBox = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            textBox6 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            maxBox = new TextBox();
+            priceBox = new TextBox();
+            inventoryBox = new TextBox();
+            nameBox = new TextBox();
+            idBox = new TextBox();
             button1 = new Button();
             button2 = new Button();
             dataGridView2 = new DataGridView();
-            textBox5 = new TextBox();
+            searchBox = new TextBox();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -59,7 +61,7 @@ namespace WGUC968
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(29, 29);
+            label1.Location = new Point(23, 24);
             label1.Name = "label1";
             label1.Size = new Size(146, 32);
             label1.TabIndex = 0;
@@ -68,24 +70,25 @@ namespace WGUC968
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(382, 338);
+            dataGridView1.Location = new Point(345, 333);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(517, 140);
+            dataGridView1.Size = new Size(661, 140);
             dataGridView1.TabIndex = 3;
             // 
-            // textBox7
+            // minBox
             // 
-            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(254, 353);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(56, 29);
-            textBox7.TabIndex = 49;
+            minBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            minBox.Location = new Point(138, 348);
+            minBox.Name = "minBox";
+            minBox.Size = new Size(56, 29);
+            minBox.TabIndex = 49;
+            minBox.TextChanged += textBox7_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(211, 356);
+            label7.Location = new Point(95, 351);
             label7.Name = "label7";
             label7.Size = new Size(37, 21);
             label7.TabIndex = 48;
@@ -95,7 +98,7 @@ namespace WGUC968
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(99, 356);
+            label6.Location = new Point(203, 351);
             label6.Name = "label6";
             label6.Size = new Size(39, 21);
             label6.TabIndex = 47;
@@ -105,7 +108,7 @@ namespace WGUC968
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(49, 321);
+            label5.Location = new Point(43, 316);
             label5.Name = "label5";
             label5.Size = new Size(89, 21);
             label5.TabIndex = 46;
@@ -115,7 +118,7 @@ namespace WGUC968
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(62, 286);
+            label4.Location = new Point(56, 281);
             label4.Name = "label4";
             label4.Size = new Size(76, 21);
             label4.TabIndex = 45;
@@ -125,7 +128,7 @@ namespace WGUC968
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(86, 251);
+            label3.Location = new Point(80, 246);
             label3.Name = "label3";
             label3.Size = new Size(52, 21);
             label3.TabIndex = 44;
@@ -135,64 +138,70 @@ namespace WGUC968
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(113, 216);
+            label2.Location = new Point(107, 211);
             label2.Name = "label2";
             label2.Size = new Size(25, 21);
             label2.TabIndex = 43;
             label2.Text = "ID";
             // 
-            // textBox6
+            // maxBox
             // 
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(144, 353);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(56, 29);
-            textBox6.TabIndex = 42;
+            maxBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maxBox.Location = new Point(248, 348);
+            maxBox.Name = "maxBox";
+            maxBox.Size = new Size(56, 29);
+            maxBox.TabIndex = 42;
+            maxBox.TextChanged += textBox6_TextChanged;
             // 
-            // textBox4
+            // priceBox
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(144, 318);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(166, 29);
-            textBox4.TabIndex = 41;
+            priceBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            priceBox.Location = new Point(138, 313);
+            priceBox.Name = "priceBox";
+            priceBox.Size = new Size(166, 29);
+            priceBox.TabIndex = 41;
+            priceBox.TextChanged += textBox4_TextChanged;
             // 
-            // textBox3
+            // inventoryBox
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(144, 283);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(166, 29);
-            textBox3.TabIndex = 40;
+            inventoryBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            inventoryBox.Location = new Point(138, 278);
+            inventoryBox.Name = "inventoryBox";
+            inventoryBox.Size = new Size(166, 29);
+            inventoryBox.TabIndex = 40;
+            inventoryBox.TextChanged += textBox3_TextChanged;
             // 
-            // textBox2
+            // nameBox
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(144, 248);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 29);
-            textBox2.TabIndex = 39;
+            nameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameBox.Location = new Point(138, 243);
+            nameBox.Name = "nameBox";
+            nameBox.Size = new Size(166, 29);
+            nameBox.TabIndex = 39;
+            nameBox.TextChanged += textBox2_TextChanged;
             // 
-            // textBox1
+            // idBox
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(144, 213);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(166, 29);
-            textBox1.TabIndex = 38;
+            idBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            idBox.Location = new Point(138, 208);
+            idBox.Name = "idBox";
+            idBox.Size = new Size(166, 29);
+            idBox.TabIndex = 38;
+            idBox.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(835, 253);
+            button1.Location = new Point(942, 248);
             button1.Name = "button1";
             button1.Size = new Size(64, 46);
             button1.TabIndex = 50;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(835, 484);
+            button2.Location = new Point(942, 479);
             button2.Name = "button2";
             button2.Size = new Size(64, 46);
             button2.TabIndex = 51;
@@ -203,23 +212,24 @@ namespace WGUC968
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(382, 107);
+            dataGridView2.Location = new Point(345, 102);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(517, 140);
+            dataGridView2.Size = new Size(661, 140);
             dataGridView2.TabIndex = 52;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
-            // textBox5
+            // searchBox
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(733, 35);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(166, 29);
-            textBox5.TabIndex = 53;
+            searchBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            searchBox.Location = new Point(727, 30);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(166, 29);
+            searchBox.TabIndex = 53;
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(652, 39);
+            button3.Location = new Point(646, 34);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 55;
@@ -228,7 +238,7 @@ namespace WGUC968
             // 
             // button4
             // 
-            button4.Location = new Point(948, 568);
+            button4.Location = new Point(942, 563);
             button4.Name = "button4";
             button4.Size = new Size(64, 46);
             button4.TabIndex = 56;
@@ -238,41 +248,63 @@ namespace WGUC968
             // 
             // button5
             // 
-            button5.Location = new Point(878, 568);
+            button5.Location = new Point(872, 563);
             button5.Name = "button5";
             button5.Size = new Size(64, 46);
             button5.TabIndex = 57;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(345, 84);
+            label8.Name = "label8";
+            label8.Size = new Size(105, 15);
+            label8.TabIndex = 58;
+            label8.Text = "All candidate parts";
+            label8.Click += label8_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(345, 313);
+            label9.Name = "label9";
+            label9.Size = new Size(201, 15);
+            label9.TabIndex = 59;
+            label9.Text = "All parts associated with this product";
+            // 
             // AddProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1024, 626);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(textBox5);
+            Controls.Add(searchBox);
             Controls.Add(dataGridView2);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox7);
+            Controls.Add(minBox);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox6);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(maxBox);
+            Controls.Add(priceBox);
+            Controls.Add(inventoryBox);
+            Controls.Add(nameBox);
+            Controls.Add(idBox);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "AddProduct";
             Text = "Add Product";
+            Load += AddProduct_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
@@ -283,24 +315,26 @@ namespace WGUC968
 
         private Label label1;
         private DataGridView dataGridView1;
-        private TextBox textBox7;
+        private TextBox minBox;
         private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox6;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox maxBox;
+        private TextBox priceBox;
+        private TextBox inventoryBox;
+        private TextBox nameBox;
+        private TextBox idBox;
         private Button button1;
         private Button button2;
         private DataGridView dataGridView2;
-        private TextBox textBox5;
+        private TextBox searchBox;
         private Button button3;
         private Button button4;
         private Button button5;
+        private Label label8;
+        private Label label9;
     }
 }

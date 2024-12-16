@@ -269,7 +269,7 @@
             Controls.Add(radioButton1);
             Name = "AddPart";
             Text = "Add Part";
-            Load += AddPart_Load;
+            //Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }
