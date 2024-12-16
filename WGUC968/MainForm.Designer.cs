@@ -1,4 +1,6 @@
-﻿namespace WGUC968
+﻿using WGUC968.Classes;
+
+namespace WGUC968
 {
     partial class MainForm
     {
