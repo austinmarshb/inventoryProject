@@ -96,7 +96,7 @@
             minBox.Location = new Point(210, 283);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 37;
+            minBox.TabIndex = 4;
             minBox.TextChanged += minBox_TextChanged;
             // 
             // label7
@@ -165,7 +165,7 @@
             maxBox.Location = new Point(320, 283);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 30;
+            maxBox.TabIndex = 5;
             maxBox.TextChanged += maxBox_TextChanged;
             // 
             // machineOrCompanyBox
@@ -174,7 +174,7 @@
             machineOrCompanyBox.Location = new Point(210, 318);
             machineOrCompanyBox.Name = "machineOrCompanyBox";
             machineOrCompanyBox.Size = new Size(166, 29);
-            machineOrCompanyBox.TabIndex = 29;
+            machineOrCompanyBox.TabIndex = 6;
             machineOrCompanyBox.TextChanged += machineOrCompanyBox_TextChanged;
             // 
             // priceBox
@@ -183,7 +183,7 @@
             priceBox.Location = new Point(210, 248);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 28;
+            priceBox.TabIndex = 3;
             priceBox.TextChanged += priceBox_TextChanged;
             // 
             // inventoryBox
@@ -192,7 +192,7 @@
             inventoryBox.Location = new Point(210, 213);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 27;
+            inventoryBox.TabIndex = 2;
             inventoryBox.TextChanged += inventoryBox_TextChanged;
             // 
             // nameBox
@@ -201,7 +201,7 @@
             nameBox.Location = new Point(210, 178);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 26;
+            nameBox.TabIndex = 1;
             nameBox.TextChanged += nameBox_TextChanged;
             // 
             // idBox
@@ -210,7 +210,7 @@
             idBox.Location = new Point(210, 143);
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
-            idBox.TabIndex = 25;
+            idBox.TabIndex = 0;
             idBox.TextChanged += idBox_TextChanged;
             // 
             // outsourcedRadioButton

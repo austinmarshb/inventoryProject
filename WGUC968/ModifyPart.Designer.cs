@@ -60,7 +60,7 @@ namespace WGUC968
             inHouseRadioButton.Location = new Point(175, 96);
             inHouseRadioButton.Name = "inHouseRadioButton";
             inHouseRadioButton.Size = new Size(91, 25);
-            inHouseRadioButton.TabIndex = 0;
+            inHouseRadioButton.TabIndex = 19;
             inHouseRadioButton.TabStop = true;
             inHouseRadioButton.Text = "In-House";
             inHouseRadioButton.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@ namespace WGUC968
             outsourcedRadioButton.Location = new Point(289, 96);
             outsourcedRadioButton.Name = "outsourcedRadioButton";
             outsourcedRadioButton.Size = new Size(109, 25);
-            outsourcedRadioButton.TabIndex = 1;
+            outsourcedRadioButton.TabIndex = 12;
             outsourcedRadioButton.TabStop = true;
             outsourcedRadioButton.Text = "Outsourced";
             outsourcedRadioButton.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@ namespace WGUC968
             idBox.Location = new Point(210, 143);
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
-            idBox.TabIndex = 2;
+            idBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -100,7 +100,7 @@ namespace WGUC968
             nameBox.Location = new Point(210, 178);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 4;
+            nameBox.TabIndex = 1;
             // 
             // inventoryBox
             // 
@@ -108,7 +108,7 @@ namespace WGUC968
             inventoryBox.Location = new Point(210, 213);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 5;
+            inventoryBox.TabIndex = 2;
             // 
             // priceBox
             // 
@@ -116,7 +116,7 @@ namespace WGUC968
             priceBox.Location = new Point(210, 248);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 6;
+            priceBox.TabIndex = 3;
             // 
             // machineOrCompanyBox
             // 
@@ -124,7 +124,7 @@ namespace WGUC968
             machineOrCompanyBox.Location = new Point(210, 318);
             machineOrCompanyBox.Name = "machineOrCompanyBox";
             machineOrCompanyBox.Size = new Size(166, 29);
-            machineOrCompanyBox.TabIndex = 7;
+            machineOrCompanyBox.TabIndex = 6;
             // 
             // maxBox
             // 
@@ -132,7 +132,7 @@ namespace WGUC968
             maxBox.Location = new Point(320, 285);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 8;
+            maxBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -202,7 +202,7 @@ namespace WGUC968
             minBox.Location = new Point(210, 285);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 15;
+            minBox.TabIndex = 4;
             // 
             // label8
             // 
@@ -220,7 +220,7 @@ namespace WGUC968
             label9.Location = new Point(0, 0);
             label9.Name = "label9";
             label9.Size = new Size(100, 23);
-            label9.TabIndex = 0;
+            label9.TabIndex = 16;
             // 
             // button1
             // 

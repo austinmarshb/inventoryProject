@@ -30,7 +30,6 @@ namespace WGUC968
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             button1 = new Button();
             button2 = new Button();
             deletePartButton = new Button();
@@ -47,19 +46,16 @@ namespace WGUC968
             dataGridView1 = new DataGridView();
             dataGridView2 = new DataGridView();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             label4 = new Label();
             clearPartSearch = new Button();
             clearProductSearch = new Button();
-            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(244, 368);
+            button1.Location = new Point(129, 368);
             button1.Name = "button1";
             button1.Size = new Size(106, 45);
             button1.TabIndex = 2;
@@ -69,7 +65,7 @@ namespace WGUC968
             // 
             // button2
             // 
-            button2.Location = new Point(356, 368);
+            button2.Location = new Point(241, 368);
             button2.Name = "button2";
             button2.Size = new Size(106, 45);
             button2.TabIndex = 3;
@@ -79,7 +75,7 @@ namespace WGUC968
             // 
             // deletePartButton
             // 
-            deletePartButton.Location = new Point(468, 368);
+            deletePartButton.Location = new Point(353, 368);
             deletePartButton.Name = "deletePartButton";
             deletePartButton.Size = new Size(106, 45);
             deletePartButton.TabIndex = 4;
@@ -89,7 +85,7 @@ namespace WGUC968
             // 
             // button6
             // 
-            button6.Location = new Point(850, 368);
+            button6.Location = new Point(747, 368);
             button6.Name = "button6";
             button6.Size = new Size(106, 45);
             button6.TabIndex = 5;
@@ -99,7 +95,7 @@ namespace WGUC968
             // 
             // button4
             // 
-            button4.Location = new Point(962, 368);
+            button4.Location = new Point(859, 368);
             button4.Name = "button4";
             button4.Size = new Size(106, 45);
             button4.TabIndex = 6;
@@ -109,7 +105,7 @@ namespace WGUC968
             // 
             // deleteProductButton
             // 
-            deleteProductButton.Location = new Point(1074, 368);
+            deleteProductButton.Location = new Point(971, 368);
             deleteProductButton.Name = "deleteProductButton";
             deleteProductButton.Size = new Size(106, 45);
             deleteProductButton.TabIndex = 7;
@@ -217,17 +213,6 @@ namespace WGUC968
             label1.Text = "Austin Marsh C968 Task";
             label1.Click += label1_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(570, 368);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 194);
-            pictureBox1.TabIndex = 20;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -261,30 +246,15 @@ namespace WGUC968
             clearProductSearch.UseVisualStyleBackColor = true;
             clearProductSearch.Click += clearProductSearch_Click;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Bahnschrift Condensed", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(710, 405);
-            label5.Name = "label5";
-            label5.Size = new Size(68, 99);
-            label5.TabIndex = 25;
-            label5.Text = "GO\r\nNIGHT\r\nOWLS!";
-            label5.Click += label5_Click;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.codioful_formerly_gradienta_bKESVqfxass_unsplash;
             ClientSize = new Size(1190, 556);
-            Controls.Add(label5);
             Controls.Add(clearProductSearch);
             Controls.Add(clearPartSearch);
             Controls.Add(label4);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
@@ -306,7 +276,6 @@ namespace WGUC968
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -329,10 +298,8 @@ namespace WGUC968
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
         private Label label1;
-        private PictureBox pictureBox1;
         private Label label4;
         private Button clearPartSearch;
         private Button clearProductSearch;
-        private Label label5;
     }
 }

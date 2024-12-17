@@ -11,7 +11,7 @@ namespace WGUC968.Classes
     {
         public int ProductID { get; set; }
         public string Name { get; set; }
-        public int Stock { get; set; }
+        public int InStock { get; set; }
         public float Price { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
@@ -20,7 +20,7 @@ namespace WGUC968.Classes
         {
             ProductID = partID;
             Name = name;
-            Stock = stock;
+            InStock = stock;
             Price = price;
             Min = min;
             Max = max;

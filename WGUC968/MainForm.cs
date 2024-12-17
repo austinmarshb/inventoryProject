@@ -29,7 +29,7 @@ namespace WGUC968
 
             foreach (var part in partsList)
             {
-                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
+                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.InStock, part.Min, part.Max);
             }
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -47,7 +47,7 @@ namespace WGUC968
 
             foreach (var product in productsList)
             {
-                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
+                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.InStock, product.Min, product.Max);
             }
 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -81,7 +81,7 @@ namespace WGUC968
 
             foreach (var part in filteredParts)
             {
-                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
+                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.InStock, part.Min, part.Max);
             }
 
             if (filteredParts.Count == 0)
@@ -120,7 +120,7 @@ namespace WGUC968
                     {
                         // Add the new part to the parts list and the DataGridView
                         partsList.Add(newPart);
-                        dataGridView1.Rows.Add(newPart.PartID, newPart.Name, newPart.Price, newPart.Stock, newPart.Min, newPart.Max);
+                        dataGridView1.Rows.Add(newPart.PartID, newPart.Name, newPart.Price, newPart.InStock, newPart.Min, newPart.Max);
                     }
                 }
             }
@@ -218,7 +218,7 @@ namespace WGUC968
 
             foreach (var product in filteredProducts)
             {
-                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
+                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.InStock, product.Min, product.Max);
             }
 
             if (filteredProducts.Count == 0)
@@ -235,7 +235,7 @@ namespace WGUC968
 
             foreach (var product in productList)
             {
-                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.Stock, product.Min, product.Max);
+                dataGridView2.Rows.Add(product.ProductID, product.Name, product.Price, product.InStock, product.Min, product.Max);
             }
 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -247,7 +247,7 @@ namespace WGUC968
 
             foreach (var part in partsList)
             {
-                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.Stock, part.Min, part.Max);
+                dataGridView1.Rows.Add(part.PartID, part.Name, part.Price, part.InStock, part.Min, part.Max);
             }
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
