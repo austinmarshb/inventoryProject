@@ -111,6 +111,7 @@ namespace WGUC968
             deleteProductButton.TabIndex = 7;
             deleteProductButton.Text = "Delete Product";
             deleteProductButton.UseVisualStyleBackColor = true;
+            deleteProductButton.Click += deleteProductButton_Click;
             // 
             // ExitButton
             // 

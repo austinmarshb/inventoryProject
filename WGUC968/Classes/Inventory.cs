@@ -20,8 +20,6 @@ namespace WGUC968.Classes
             get { return parts; }
         }
 
-
-
         public static void AddProduct(Product product)
         {
             Inventory.Products.Add(product);
@@ -29,12 +27,8 @@ namespace WGUC968.Classes
 
         public static bool RemoveProduct(int productID)
         {
-            if (Products.Contains(Products[productID]))
-            {
-                Products.Remove(products[productID]);
-                return true;
-            }
-            return false;
+            Products.RemoveAt(productID);
+            return true;
         }
 
         //public static Product LookupProduct(int productID)
