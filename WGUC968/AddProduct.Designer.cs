@@ -226,6 +226,7 @@ namespace WGUC968
             button3.TabIndex = 55;
             button3.Text = "Search";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // CancelButton
             // 

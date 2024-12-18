@@ -95,5 +95,91 @@ namespace WGUC968
                 }
             }
         }
+
+
+        public void partSearchBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void partSearchButton_Click(object sender, EventArgs e)
+        {
+            CurrencyManager cm = (CurrencyManager)BindingContext[PartsDataGrid.DataSource];
+            cm.SuspendBinding();
+            for (int i = 0; i < Inventory.AllParts.Count; i++)
+            {
+                if (partSearchBox.Text == Inventory.AllParts[i].PartID.ToString())
+                {
+                    PartsDataGrid.Rows[i].Visible = true;
+                }
+                else
+                {
+                    PartsDataGrid.Rows[i].Visible = false;
+                }
+            }
+            cm.ResumeBinding();
+
+            if (partSearchBox.Text == "")
+            {
+                foreach (DataGridViewRow row in PartsDataGrid.Rows)
+                {
+                    row.Visible = true;
+                }
+            }
+            //for (int j = 0; j < Inventory.AllParts.Count; j++)
+            //{
+            //    if (partSearchBox.Text != Inventory.AllParts[j].PartID.ToString())
+            //    {
+            //        PartsDataGrid.Rows[j].
+            //    }
+        }
+
+        private void clearPartSearch_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in PartsDataGrid.Rows)
+            {
+                row.Visible = true;
+                partSearchBox.Text = "";
+            }
+        }
+
+        private void productSearchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productSearchButton_Click(object sender, EventArgs e)
+        {
+            CurrencyManager cm = (CurrencyManager)BindingContext[ProductsDataGrid.DataSource];
+            cm.SuspendBinding();
+            for (int i = 0; i < Inventory.Products.Count; i++)
+            {
+                if (productSearchBox.Text == Inventory.Products[i].ProductID.ToString())
+                {
+                    ProductsDataGrid.Rows[i].Visible = true;
+                }
+                else
+                {
+                    ProductsDataGrid.Rows[i].Visible = false;
+                }
+            }
+            cm.ResumeBinding();
+
+            if (productSearchBox.Text == "")
+            {
+                foreach (DataGridViewRow row in ProductsDataGrid.Rows)
+                {
+                    row.Visible = true;
+                }
+            }
+        }
+
+        private void clearProductSearch_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in ProductsDataGrid.Rows)
+            {
+                row.Visible = true;
+                productSearchBox.Text = "";
+            }
+        }
     }
 }

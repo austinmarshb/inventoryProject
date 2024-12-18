@@ -25,5 +25,11 @@ namespace WGUC968
         {
             Close();
         }
+
+        //this is the SEARCH button
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

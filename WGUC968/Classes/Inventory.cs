@@ -61,12 +61,12 @@ namespace WGUC968.Classes
         public static int PartIDCalculation()
         {
 
-            int idResult = Inventory.AllParts.Count + 1;
-            for (int i = 0; i < Inventory.AllParts.Count; i++)
+            int idResult = AllParts.Count + 1;
+            for (int i = 0; i < AllParts.Count; i++)
             {
-                if (idResult == Inventory.AllParts[i].PartID)
+                if (idResult == AllParts[i].PartID)
                 {
-                    idResult = Inventory.AllParts.Count + 2;
+                    idResult = AllParts.Count + 2;
                 }
             }
             return idResult;
@@ -74,12 +74,12 @@ namespace WGUC968.Classes
 
         public static int ProductIDCalculation()
         {
-            int idResult = Inventory.Products.Count + 1;
-            for (int i = 0; i < Inventory.Products.Count; i++)
+            int idResult = Products.Count + 1;
+            for (int i = 0; i < Products.Count; i++)
             {
-                if (idResult == Inventory.Products[i].ProductID)
+                if (idResult == Products[i].ProductID)
                 {
-                    idResult = Inventory.Products.Count + 2;
+                    idResult = Products.Count + 2;
                 }
             }
             return idResult;

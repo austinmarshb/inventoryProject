@@ -129,6 +129,7 @@ namespace WGUC968
             productSearchBox.Name = "productSearchBox";
             productSearchBox.Size = new Size(204, 23);
             productSearchBox.TabIndex = 10;
+            productSearchBox.TextChanged += productSearchBox_TextChanged;
             // 
             // partSearchButton
             // 
@@ -138,6 +139,7 @@ namespace WGUC968
             partSearchButton.TabIndex = 11;
             partSearchButton.Text = "Search";
             partSearchButton.UseVisualStyleBackColor = true;
+            partSearchButton.Click += partSearchButton_Click;
             // 
             // productSearchButton
             // 
@@ -147,6 +149,7 @@ namespace WGUC968
             productSearchButton.TabIndex = 12;
             productSearchButton.Text = "Search";
             productSearchButton.UseVisualStyleBackColor = true;
+            productSearchButton.Click += productSearchButton_Click;
             // 
             // partSearchBox
             // 
@@ -154,6 +157,7 @@ namespace WGUC968
             partSearchBox.Name = "partSearchBox";
             partSearchBox.Size = new Size(204, 23);
             partSearchBox.TabIndex = 13;
+            partSearchBox.TextChanged += partSearchBox_TextChanged;
             // 
             // label2
             // 
@@ -241,6 +245,7 @@ namespace WGUC968
             clearPartSearch.TabIndex = 23;
             clearPartSearch.Text = "Clear";
             clearPartSearch.UseVisualStyleBackColor = true;
+            clearPartSearch.Click += clearPartSearch_Click;
             // 
             // clearProductSearch
             // 
@@ -250,12 +255,13 @@ namespace WGUC968
             clearProductSearch.TabIndex = 24;
             clearProductSearch.Text = "Clear";
             clearProductSearch.UseVisualStyleBackColor = true;
+            clearProductSearch.Click += clearProductSearch_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1190, 556);
+            ClientSize = new Size(1191, 556);
             Controls.Add(clearProductSearch);
             Controls.Add(clearPartSearch);
             Controls.Add(label4);
