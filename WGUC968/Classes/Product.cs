@@ -28,7 +28,7 @@ namespace WGUC968.Classes
         public Product(int partID, string name, int stock, decimal price, int min, int max)
         {
             ProductID = partID;
-            Name = name;
+            Name = name.ToLower();
             InStock = stock;
             Price = price;
             Min = min;

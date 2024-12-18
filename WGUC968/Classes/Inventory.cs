@@ -20,6 +20,14 @@ namespace WGUC968.Classes
             get { return parts; }
         }
 
+        static private BindingList<Part> associatedParts = new BindingList<Part>();
+
+        public static BindingList<Part> AssociatedParts
+        {
+            set { parts = value; }
+            get { return parts; }
+        }
+
         public static void AddProduct(Product product)
         {
             Inventory.Products.Add(product);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WGUC968.Classes;
 
 namespace WGUC968
 {
@@ -17,6 +18,9 @@ namespace WGUC968
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             idBox.ReadOnly = true;
+
+            candidatePartsGrid.DataSource = Inventory.AllParts;
+            candidatePartsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

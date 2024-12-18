@@ -19,6 +19,9 @@ namespace WGUC968
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             idBox.ReadOnly = true;
+
+            candidatePartsGrid.DataSource = Inventory.AllParts;
+            candidatePartsGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
