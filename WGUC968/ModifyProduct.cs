@@ -15,9 +15,11 @@ namespace WGUC968
         public ModifyProduct()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            idBox.ReadOnly = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }

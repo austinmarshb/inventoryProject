@@ -46,25 +46,26 @@ namespace WGUC968
             label6 = new Label();
             label7 = new Label();
             minBox = new TextBox();
-            label8 = new Label();
             label9 = new Label();
-            button1 = new Button();
+            CancelButton = new Button();
             button2 = new Button();
             label11 = new Label();
+            inOrOutLabel = new Label();
             SuspendLayout();
             // 
             // inHouseRadioButton
             // 
             inHouseRadioButton.AutoSize = true;
+            inHouseRadioButton.Checked = true;
             inHouseRadioButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             inHouseRadioButton.Location = new Point(175, 96);
             inHouseRadioButton.Name = "inHouseRadioButton";
             inHouseRadioButton.Size = new Size(91, 25);
-            inHouseRadioButton.TabIndex = 19;
+            inHouseRadioButton.TabIndex = 6;
             inHouseRadioButton.TabStop = true;
             inHouseRadioButton.Text = "In-House";
             inHouseRadioButton.UseVisualStyleBackColor = true;
-            inHouseRadioButton.CheckedChanged += radioButton1_CheckedChanged;
+            inHouseRadioButton.CheckedChanged += inHouseRadioButton_CheckedChanged;
             // 
             // outsourcedRadioButton
             // 
@@ -73,11 +74,10 @@ namespace WGUC968
             outsourcedRadioButton.Location = new Point(289, 96);
             outsourcedRadioButton.Name = "outsourcedRadioButton";
             outsourcedRadioButton.Size = new Size(109, 25);
-            outsourcedRadioButton.TabIndex = 12;
-            outsourcedRadioButton.TabStop = true;
+            outsourcedRadioButton.TabIndex = 7;
             outsourcedRadioButton.Text = "Outsourced";
             outsourcedRadioButton.UseVisualStyleBackColor = true;
-            outsourcedRadioButton.CheckedChanged += radioButton2_CheckedChanged;
+            outsourcedRadioButton.CheckedChanged += outsourcedRadioButton_CheckedChanged;
             // 
             // idBox
             // 
@@ -85,7 +85,7 @@ namespace WGUC968
             idBox.Location = new Point(210, 143);
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
-            idBox.TabIndex = 0;
+            idBox.TabIndex = 14;
             // 
             // label1
             // 
@@ -100,7 +100,7 @@ namespace WGUC968
             nameBox.Location = new Point(210, 178);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 1;
+            nameBox.TabIndex = 0;
             // 
             // inventoryBox
             // 
@@ -108,7 +108,7 @@ namespace WGUC968
             inventoryBox.Location = new Point(210, 213);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 2;
+            inventoryBox.TabIndex = 1;
             // 
             // priceBox
             // 
@@ -116,7 +116,7 @@ namespace WGUC968
             priceBox.Location = new Point(210, 248);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 3;
+            priceBox.TabIndex = 2;
             // 
             // machineOrCompanyBox
             // 
@@ -124,7 +124,7 @@ namespace WGUC968
             machineOrCompanyBox.Location = new Point(210, 318);
             machineOrCompanyBox.Name = "machineOrCompanyBox";
             machineOrCompanyBox.Size = new Size(166, 29);
-            machineOrCompanyBox.TabIndex = 6;
+            machineOrCompanyBox.TabIndex = 5;
             // 
             // maxBox
             // 
@@ -132,7 +132,7 @@ namespace WGUC968
             maxBox.Location = new Point(320, 285);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 5;
+            maxBox.TabIndex = 4;
             // 
             // label2
             // 
@@ -143,7 +143,6 @@ namespace WGUC968
             label2.Size = new Size(25, 21);
             label2.TabIndex = 9;
             label2.Text = "ID";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -154,7 +153,6 @@ namespace WGUC968
             label3.Size = new Size(52, 21);
             label3.TabIndex = 10;
             label3.Text = "Name";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -202,18 +200,7 @@ namespace WGUC968
             minBox.Location = new Point(210, 285);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 4;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(82, 321);
-            label8.Name = "label8";
-            label8.Size = new Size(88, 21);
-            label8.TabIndex = 16;
-            label8.Text = "Machine ID";
-            label8.Click += label8_Click;
+            minBox.TabIndex = 3;
             // 
             // label9
             // 
@@ -222,16 +209,16 @@ namespace WGUC968
             label9.Size = new Size(100, 23);
             label9.TabIndex = 16;
             // 
-            // button1
+            // CancelButton
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(397, 406);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 58);
-            button1.TabIndex = 19;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            CancelButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CancelButton.Location = new Point(397, 406);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(83, 58);
+            CancelButton.TabIndex = 9;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
             // button2
             // 
@@ -239,10 +226,9 @@ namespace WGUC968
             button2.Location = new Point(308, 406);
             button2.Name = "button2";
             button2.Size = new Size(83, 58);
-            button2.TabIndex = 20;
+            button2.TabIndex = 8;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // label11
             // 
@@ -254,16 +240,28 @@ namespace WGUC968
             label11.TabIndex = 22;
             label11.Text = "Modify Part";
             // 
+            // inOrOutLabel
+            // 
+            inOrOutLabel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inOrOutLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            inOrOutLabel.ImageAlign = ContentAlignment.MiddleRight;
+            inOrOutLabel.Location = new Point(48, 321);
+            inOrOutLabel.Name = "inOrOutLabel";
+            inOrOutLabel.Size = new Size(155, 21);
+            inOrOutLabel.TabIndex = 39;
+            inOrOutLabel.Text = "Machine ID";
+            inOrOutLabel.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // ModifyPart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(517, 501);
+            Controls.Add(inOrOutLabel);
             Controls.Add(label11);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(CancelButton);
             Controls.Add(label9);
-            Controls.Add(label8);
             Controls.Add(minBox);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -282,7 +280,6 @@ namespace WGUC968
             Controls.Add(inHouseRadioButton);
             Name = "ModifyPart";
             Text = "Modify Part";
-            Load += ModifyPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,10 +302,10 @@ namespace WGUC968
         private Label label6;
         private Label label7;
         private TextBox minBox;
-        private Label label8;
         private Label label9;
-        private Button button1;
+        private Button CancelButton;
         private Button button2;
         private Label label11;
+        private Label inOrOutLabel;
     }
 }

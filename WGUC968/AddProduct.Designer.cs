@@ -49,7 +49,7 @@ namespace WGUC968
             dataGridView2 = new DataGridView();
             searchBox = new TextBox();
             button3 = new Button();
-            button4 = new Button();
+            CancelButton = new Button();
             button5 = new Button();
             label8 = new Label();
             label9 = new Label();
@@ -73,7 +73,7 @@ namespace WGUC968
             dataGridView1.Location = new Point(345, 333);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(661, 140);
-            dataGridView1.TabIndex = 3;
+            dataGridView1.TabIndex = 5;
             // 
             // minBox
             // 
@@ -81,8 +81,7 @@ namespace WGUC968
             minBox.Location = new Point(138, 348);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 49;
-            minBox.TextChanged += textBox7_TextChanged;
+            minBox.TabIndex = 3;
             // 
             // label7
             // 
@@ -150,8 +149,7 @@ namespace WGUC968
             maxBox.Location = new Point(248, 348);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 42;
-            maxBox.TextChanged += textBox6_TextChanged;
+            maxBox.TabIndex = 4;
             // 
             // priceBox
             // 
@@ -159,8 +157,7 @@ namespace WGUC968
             priceBox.Location = new Point(138, 313);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 41;
-            priceBox.TextChanged += textBox4_TextChanged;
+            priceBox.TabIndex = 2;
             // 
             // inventoryBox
             // 
@@ -168,8 +165,7 @@ namespace WGUC968
             inventoryBox.Location = new Point(138, 278);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 40;
-            inventoryBox.TextChanged += textBox3_TextChanged;
+            inventoryBox.TabIndex = 1;
             // 
             // nameBox
             // 
@@ -177,8 +173,7 @@ namespace WGUC968
             nameBox.Location = new Point(138, 243);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 39;
-            nameBox.TextChanged += textBox2_TextChanged;
+            nameBox.TabIndex = 0;
             // 
             // idBox
             // 
@@ -187,7 +182,6 @@ namespace WGUC968
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
             idBox.TabIndex = 38;
-            idBox.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -197,7 +191,6 @@ namespace WGUC968
             button1.TabIndex = 50;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -207,7 +200,6 @@ namespace WGUC968
             button2.TabIndex = 51;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // dataGridView2
             // 
@@ -215,8 +207,7 @@ namespace WGUC968
             dataGridView2.Location = new Point(345, 102);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(661, 140);
-            dataGridView2.TabIndex = 52;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridView2.TabIndex = 6;
             // 
             // searchBox
             // 
@@ -224,7 +215,7 @@ namespace WGUC968
             searchBox.Location = new Point(727, 30);
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(166, 29);
-            searchBox.TabIndex = 53;
+            searchBox.TabIndex = 7;
             // 
             // button3
             // 
@@ -236,22 +227,22 @@ namespace WGUC968
             button3.Text = "Search";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // CancelButton
             // 
-            button4.Location = new Point(942, 563);
-            button4.Name = "button4";
-            button4.Size = new Size(64, 46);
-            button4.TabIndex = 56;
-            button4.Text = "Cancel";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            CancelButton.Location = new Point(942, 563);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(64, 46);
+            CancelButton.TabIndex = 9;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
             // button5
             // 
             button5.Location = new Point(872, 563);
             button5.Name = "button5";
             button5.Size = new Size(64, 46);
-            button5.TabIndex = 57;
+            button5.TabIndex = 8;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
             // 
@@ -263,7 +254,6 @@ namespace WGUC968
             label8.Size = new Size(105, 15);
             label8.TabIndex = 58;
             label8.Text = "All candidate parts";
-            label8.Click += label8_Click;
             // 
             // label9
             // 
@@ -282,7 +272,7 @@ namespace WGUC968
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(CancelButton);
             Controls.Add(button3);
             Controls.Add(searchBox);
             Controls.Add(dataGridView2);
@@ -304,7 +294,6 @@ namespace WGUC968
             Controls.Add(label1);
             Name = "AddProduct";
             Text = "Add Product";
-            Load += AddProduct_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
@@ -332,7 +321,7 @@ namespace WGUC968
         private DataGridView dataGridView2;
         private TextBox searchBox;
         private Button button3;
-        private Button button4;
+        private Button CancelButton;
         private Button button5;
         private Label label8;
         private Label label9;

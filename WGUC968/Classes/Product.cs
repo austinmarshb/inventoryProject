@@ -7,16 +7,25 @@ using System.Threading.Tasks;
 
 namespace WGUC968.Classes
 {
+
     public class Product
     {
+        private BindingList<Part> PartList = new BindingList<Part>();
+
+        public BindingList<Part> AssociatedParts
+        {
+            get { return PartList; }
+            set { PartList = value; }
+        }
+
         public int ProductID { get; set; }
         public string Name { get; set; }
         public int InStock { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public Product(int partID, string name, int stock, float price, int min, int max)
+        public Product(int partID, string name, int stock, decimal price, int min, int max)
         {
             ProductID = partID;
             Name = name;
@@ -26,22 +35,16 @@ namespace WGUC968.Classes
             Max = max;
         }
 
-        public BindingList<Part> AssociatedParts { get; set; } = new BindingList<Part>();
+        //public void addAssociatedPart(Part part)
+        //{
+        //}
 
-        public void addAssociatedPart(Part part)
-        {
-            AssociatedParts.Add(part);
-        }
+        //public bool removeAssociatedPart(int partID)
+        //{
+        //}
 
-        public bool removeAssociatedPart(int partID)
-        {
-            var partToRemove = AssociatedParts.FirstOrDefault(p => p.PartID == partID);
-            return partToRemove != null && AssociatedParts.Remove(partToRemove);
-        }
-
-        public Part lookupAssociatedPart(int partID)
-        {
-            return AssociatedParts.FirstOrDefault(p => p.PartID == partID);
-        }
+        //public Part lookupAssociatedPart(int partID)
+        //{
+        //}
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,58 +16,24 @@ namespace WGUC968
         public ModifyPart()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+            idBox.ReadOnly = true;
+            inOrOutLabel.Text = "Machine ID";
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void inHouseRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            inOrOutLabel.Text = "Machine ID";
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void outsourcedRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            inOrOutLabel.Text = "Company Name";
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModifyPart_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (inHouseRadioButton.Checked)
-            {
-                label8.Text = "         Machine ID";
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (outsourcedRadioButton.Checked)
-            {
-                label8.Text = "Company Name";
-            }
-        }
-
     }
 }
