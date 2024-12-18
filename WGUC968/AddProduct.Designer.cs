@@ -31,7 +31,7 @@ namespace WGUC968
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            associatedPartsGrid = new DataGridView();
             minBox = new TextBox();
             label7 = new Label();
             label6 = new Label();
@@ -46,15 +46,15 @@ namespace WGUC968
             idBox = new TextBox();
             button1 = new Button();
             button2 = new Button();
-            dataGridView2 = new DataGridView();
+            candidatePartsGrid = new DataGridView();
             searchBox = new TextBox();
             button3 = new Button();
             CancelButton = new Button();
             button5 = new Button();
             label8 = new Label();
             label9 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)associatedPartsGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)candidatePartsGrid).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -67,13 +67,19 @@ namespace WGUC968
             label1.TabIndex = 0;
             label1.Text = "Add Product";
             // 
-            // dataGridView1
+            // associatedPartsGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(345, 333);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(661, 140);
-            dataGridView1.TabIndex = 5;
+            associatedPartsGrid.AllowUserToAddRows = false;
+            associatedPartsGrid.AllowUserToDeleteRows = false;
+            associatedPartsGrid.AllowUserToResizeColumns = false;
+            associatedPartsGrid.AllowUserToResizeRows = false;
+            associatedPartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            associatedPartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            associatedPartsGrid.Location = new Point(345, 330);
+            associatedPartsGrid.Name = "associatedPartsGrid";
+            associatedPartsGrid.ReadOnly = true;
+            associatedPartsGrid.Size = new Size(661, 173);
+            associatedPartsGrid.TabIndex = 5;
             // 
             // minBox
             // 
@@ -185,29 +191,37 @@ namespace WGUC968
             // 
             // button1
             // 
-            button1.Location = new Point(942, 248);
+            button1.Location = new Point(643, 278);
             button1.Name = "button1";
             button1.Size = new Size(64, 46);
             button1.TabIndex = 50;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(942, 479);
+            button2.Location = new Point(643, 509);
             button2.Name = "button2";
             button2.Size = new Size(64, 46);
             button2.TabIndex = 51;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // dataGridView2
+            // candidatePartsGrid
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(345, 102);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(661, 140);
-            dataGridView2.TabIndex = 6;
+            candidatePartsGrid.AllowUserToAddRows = false;
+            candidatePartsGrid.AllowUserToDeleteRows = false;
+            candidatePartsGrid.AllowUserToResizeColumns = false;
+            candidatePartsGrid.AllowUserToResizeRows = false;
+            candidatePartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            candidatePartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            candidatePartsGrid.Location = new Point(345, 102);
+            candidatePartsGrid.Name = "candidatePartsGrid";
+            candidatePartsGrid.ReadOnly = true;
+            candidatePartsGrid.Size = new Size(661, 170);
+            candidatePartsGrid.TabIndex = 6;
             // 
             // searchBox
             // 
@@ -226,6 +240,7 @@ namespace WGUC968
             button3.TabIndex = 55;
             button3.Text = "Search";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // CancelButton
             // 
@@ -245,6 +260,7 @@ namespace WGUC968
             button5.TabIndex = 8;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // label8
             // 
@@ -275,7 +291,7 @@ namespace WGUC968
             Controls.Add(CancelButton);
             Controls.Add(button3);
             Controls.Add(searchBox);
-            Controls.Add(dataGridView2);
+            Controls.Add(candidatePartsGrid);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(minBox);
@@ -290,12 +306,12 @@ namespace WGUC968
             Controls.Add(inventoryBox);
             Controls.Add(nameBox);
             Controls.Add(idBox);
-            Controls.Add(dataGridView1);
+            Controls.Add(associatedPartsGrid);
             Controls.Add(label1);
             Name = "AddProduct";
             Text = "Add Product";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)associatedPartsGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)candidatePartsGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -303,7 +319,7 @@ namespace WGUC968
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView associatedPartsGrid;
         private TextBox minBox;
         private Label label7;
         private Label label6;
@@ -318,7 +334,7 @@ namespace WGUC968
         private TextBox idBox;
         private Button button1;
         private Button button2;
-        private DataGridView dataGridView2;
+        private DataGridView candidatePartsGrid;
         private TextBox searchBox;
         private Button button3;
         private Button CancelButton;

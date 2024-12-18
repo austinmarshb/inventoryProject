@@ -25,10 +25,10 @@ namespace WGUC968.Classes
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public Product(int partID, string name, int stock, decimal price, int min, int max)
+        public Product(int productID, string name, int stock, decimal price, int min, int max)
         {
-            ProductID = partID;
-            Name = name;
+            ProductID = productID;
+            Name = name.ToLower();
             InStock = stock;
             Price = price;
             Min = min;
