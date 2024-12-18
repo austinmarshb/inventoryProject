@@ -1,56 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace WGUC968.Classes
 {
-    public class Inventory
+    public static class Inventory
     {
-        public BindingList<Product> Products { get; set; } = new BindingList<Product>();
-        public BindingList<Part> AllParts { get; set; } = new BindingList<Part>();
+        static private BindingList<Product> products = new BindingList<Product>();
 
-        public void addProduct(Product product)
+        static public BindingList<Product> Products
         {
-            Products.Add(product);
+            set { products = value; }
+            get { return products; }
         }
 
-        public bool removeProduct(int productID)
+        static private BindingList<Part> parts = new BindingList<Part>();
+
+        public static BindingList<Part> AllParts
         {
-            var productToRemove = Products.FirstOrDefault(p => p.ProductID == productID);
-            return productToRemove != null && Products.Remove(productToRemove);
+            set { parts = value; }
+            get { return parts; }
         }
 
-        public Product lookupProduct(int productID)
+
+
+        public static void AddProduct(Product product)
         {
-            return Products.FirstOrDefault(p => p.ProductID == productID);
+            Inventory.Products.Add(product);
         }
 
-        public void updateProduct(int index, Product product)
+        public static bool RemoveProduct(int productID)
         {
-            Products[index] = product;
+            if (Products.Contains(Products[productID]))
+            {
+                Products.Remove(products[productID]);
+                return true;
+            }
+            return false;
         }
 
-        public void addPart(Part part)
+        //public static Product LookupProduct(int productID)
+        //{
+        //}
+
+        //public static void updateProduct(int index, Product product)
+        //{
+        //}
+
+        public static void AddPart(Part part)
         {
-            AllParts.Add(part);
+            Inventory.AllParts.Add(part);
         }
 
-        public bool deletePart(Part part)
+        public static bool DeletePart(Part part)
         {
-            return AllParts.Remove(part);
+            AllParts.Remove(part);
+            return true;
         }
 
-        public Part lookupPart(int partID)
+        //public static Part lookupPart(int partID)
+        //{
+        //}
+
+        //public static void updatePart(int index, Part part)
+        //{
+        //}
+
+        public static int PartIDCalculation()
         {
-            return AllParts.FirstOrDefault(p => p.PartID == partID);
+
+            int idResult = Inventory.AllParts.Count + 1;
+            for (int i = 0; i < Inventory.AllParts.Count; i++)
+            {
+                if (idResult == Inventory.AllParts[i].PartID)
+                {
+                    idResult = Inventory.AllParts.Count + 2;
+                }
+            }
+            return idResult;
         }
 
-        public void updatePart(int index, Part part)
+        public static int ProductIDCalculation()
         {
-            AllParts[index] = part;
+            int idResult = Inventory.Products.Count + 1;
+            for (int i = 0; i < Inventory.Products.Count; i++)
+            {
+                if (idResult == Inventory.Products[i].ProductID)
+                {
+                    idResult = Inventory.Products.Count + 2;
+                }
+            }
+            return idResult;
         }
     }
 }

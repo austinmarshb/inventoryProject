@@ -31,7 +31,7 @@ namespace WGUC968
         private void InitializeComponent()
         {
             button5 = new Button();
-            button4 = new Button();
+            CancelButton = new Button();
             button3 = new Button();
             searchBox = new TextBox();
             dataGridView2 = new DataGridView();
@@ -66,15 +66,15 @@ namespace WGUC968
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // CancelButton
             // 
-            button4.Location = new Point(941, 562);
-            button4.Name = "button4";
-            button4.Size = new Size(64, 46);
-            button4.TabIndex = 77;
-            button4.Text = "Cancel";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            CancelButton.Location = new Point(941, 562);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(64, 46);
+            CancelButton.TabIndex = 77;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
             // button3
             // 
@@ -92,7 +92,7 @@ namespace WGUC968
             searchBox.Location = new Point(726, 29);
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(166, 29);
-            searchBox.TabIndex = 75;
+            searchBox.TabIndex = 5;
             // 
             // dataGridView2
             // 
@@ -126,7 +126,7 @@ namespace WGUC968
             minBox.Location = new Point(137, 350);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 71;
+            minBox.TabIndex = 3;
             // 
             // label7
             // 
@@ -194,7 +194,7 @@ namespace WGUC968
             maxBox.Location = new Point(247, 347);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 64;
+            maxBox.TabIndex = 4;
             // 
             // priceBox
             // 
@@ -202,7 +202,7 @@ namespace WGUC968
             priceBox.Location = new Point(137, 312);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 63;
+            priceBox.TabIndex = 2;
             // 
             // inventoryBox
             // 
@@ -210,7 +210,7 @@ namespace WGUC968
             inventoryBox.Location = new Point(137, 277);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 62;
+            inventoryBox.TabIndex = 1;
             // 
             // nameBox
             // 
@@ -218,7 +218,7 @@ namespace WGUC968
             nameBox.Location = new Point(137, 242);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 61;
+            nameBox.TabIndex = 0;
             // 
             // idBox
             // 
@@ -226,7 +226,7 @@ namespace WGUC968
             idBox.Location = new Point(137, 207);
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
-            idBox.TabIndex = 60;
+            idBox.TabIndex = 16;
             // 
             // dataGridView1
             // 
@@ -272,7 +272,7 @@ namespace WGUC968
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(CancelButton);
             Controls.Add(button3);
             Controls.Add(searchBox);
             Controls.Add(dataGridView2);
@@ -303,7 +303,7 @@ namespace WGUC968
         #endregion
 
         private Button button5;
-        private Button button4;
+        private Button CancelButton;
         private Button button3;
         private TextBox searchBox;
         private DataGridView dataGridView2;

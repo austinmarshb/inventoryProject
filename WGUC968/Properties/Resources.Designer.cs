@@ -59,45 +59,5 @@ namespace WGUC968.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap abstract_5719247_1920 {
-            get {
-                object obj = ResourceManager.GetObject("abstract-5719247_1920", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap abstract_5719525_640 {
-            get {
-                object obj = ResourceManager.GetObject("abstract-5719525_640", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bloom_abstract_2560x1440_17263 {
-            get {
-                object obj = ResourceManager.GetObject("bloom-abstract-2560x1440-17263", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mr_owl_s_dance_by_yannickbouchard_d7kqo62 {
-            get {
-                object obj = ResourceManager.GetObject("mr_owl_s_dance_by_yannickbouchard_d7kqo62", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

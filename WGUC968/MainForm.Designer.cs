@@ -30,102 +30,97 @@ namespace WGUC968
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            button1 = new Button();
-            button2 = new Button();
-            deletePartButton = new Button();
-            button6 = new Button();
-            button4 = new Button();
+            AddPartButton = new Button();
+            ModifyPartButton = new Button();
+            DeletePartButton = new Button();
+            AddProductButton = new Button();
+            ModifyProductButton = new Button();
             deleteProductButton = new Button();
-            button7 = new Button();
+            ExitButton = new Button();
             productSearchBox = new TextBox();
             partSearchButton = new Button();
             productSearchButton = new Button();
             partSearchBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
+            PartsDataGrid = new DataGridView();
+            ProductsDataGrid = new DataGridView();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             label4 = new Label();
             clearPartSearch = new Button();
             clearProductSearch = new Button();
-            label5 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PartsDataGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ProductsDataGrid).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // AddPartButton
             // 
-            button1.Location = new Point(244, 368);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 45);
-            button1.TabIndex = 2;
-            button1.Text = "Add Part";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            AddPartButton.Location = new Point(129, 368);
+            AddPartButton.Name = "AddPartButton";
+            AddPartButton.Size = new Size(106, 45);
+            AddPartButton.TabIndex = 2;
+            AddPartButton.Text = "Add Part";
+            AddPartButton.UseVisualStyleBackColor = true;
+            AddPartButton.Click += AddPartButton_Click;
             // 
-            // button2
+            // ModifyPartButton
             // 
-            button2.Location = new Point(356, 368);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 45);
-            button2.TabIndex = 3;
-            button2.Text = "Modify Part";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ModifyPartButton.Location = new Point(241, 368);
+            ModifyPartButton.Name = "ModifyPartButton";
+            ModifyPartButton.Size = new Size(106, 45);
+            ModifyPartButton.TabIndex = 3;
+            ModifyPartButton.Text = "Modify Part";
+            ModifyPartButton.UseVisualStyleBackColor = true;
+            ModifyPartButton.Click += ModifyPartButton_Click;
             // 
-            // deletePartButton
+            // DeletePartButton
             // 
-            deletePartButton.Location = new Point(468, 368);
-            deletePartButton.Name = "deletePartButton";
-            deletePartButton.Size = new Size(106, 45);
-            deletePartButton.TabIndex = 4;
-            deletePartButton.Text = "Delete Part";
-            deletePartButton.UseVisualStyleBackColor = true;
-            deletePartButton.Click += button3_Click;
+            DeletePartButton.Location = new Point(353, 368);
+            DeletePartButton.Name = "DeletePartButton";
+            DeletePartButton.Size = new Size(106, 45);
+            DeletePartButton.TabIndex = 4;
+            DeletePartButton.Text = "Delete Part";
+            DeletePartButton.UseVisualStyleBackColor = true;
+            DeletePartButton.Click += DeletePartButton_Click;
             // 
-            // button6
+            // AddProductButton
             // 
-            button6.Location = new Point(850, 368);
-            button6.Name = "button6";
-            button6.Size = new Size(106, 45);
-            button6.TabIndex = 5;
-            button6.Text = "Add Product";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            AddProductButton.Location = new Point(747, 368);
+            AddProductButton.Name = "AddProductButton";
+            AddProductButton.Size = new Size(106, 45);
+            AddProductButton.TabIndex = 5;
+            AddProductButton.Text = "Add Product";
+            AddProductButton.UseVisualStyleBackColor = true;
+            AddProductButton.Click += AddProductButton_Click;
             // 
-            // button4
+            // ModifyProductButton
             // 
-            button4.Location = new Point(962, 368);
-            button4.Name = "button4";
-            button4.Size = new Size(106, 45);
-            button4.TabIndex = 6;
-            button4.Text = "Modify Product";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            ModifyProductButton.Location = new Point(859, 368);
+            ModifyProductButton.Name = "ModifyProductButton";
+            ModifyProductButton.Size = new Size(106, 45);
+            ModifyProductButton.TabIndex = 6;
+            ModifyProductButton.Text = "Modify Product";
+            ModifyProductButton.UseVisualStyleBackColor = true;
+            ModifyProductButton.Click += ModifyProductButton_Click;
             // 
             // deleteProductButton
             // 
-            deleteProductButton.Location = new Point(1074, 368);
+            deleteProductButton.Location = new Point(971, 368);
             deleteProductButton.Name = "deleteProductButton";
             deleteProductButton.Size = new Size(106, 45);
             deleteProductButton.TabIndex = 7;
             deleteProductButton.Text = "Delete Product";
             deleteProductButton.UseVisualStyleBackColor = true;
-            deleteProductButton.Click += button5_Click;
             // 
-            // button7
+            // ExitButton
             // 
-            button7.Location = new Point(1109, 488);
-            button7.Name = "button7";
-            button7.Size = new Size(69, 56);
-            button7.TabIndex = 8;
-            button7.Text = "EXIT";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            ExitButton.Location = new Point(1109, 488);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(69, 56);
+            ExitButton.TabIndex = 8;
+            ExitButton.Text = "EXIT";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // productSearchBox
             // 
@@ -142,7 +137,6 @@ namespace WGUC968
             partSearchButton.TabIndex = 11;
             partSearchButton.Text = "Search";
             partSearchButton.UseVisualStyleBackColor = true;
-            partSearchButton.Click += button8_Click;
             // 
             // productSearchButton
             // 
@@ -152,7 +146,6 @@ namespace WGUC968
             productSearchButton.TabIndex = 12;
             productSearchButton.Text = "Search";
             productSearchButton.UseVisualStyleBackColor = true;
-            productSearchButton.Click += productSearchButton_Click;
             // 
             // partSearchBox
             // 
@@ -166,80 +159,78 @@ namespace WGUC968
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Snow;
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(12, 79);
             label2.Name = "label2";
             label2.Size = new Size(64, 32);
             label2.TabIndex = 15;
             label2.Text = "Parts";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Snow;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(618, 79);
             label3.Name = "label3";
             label3.Size = new Size(106, 32);
             label3.TabIndex = 16;
             label3.Text = "Products";
             // 
-            // dataGridView1
+            // PartsDataGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 114);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(562, 248);
-            dataGridView1.TabIndex = 17;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            PartsDataGrid.AllowUserToAddRows = false;
+            PartsDataGrid.AllowUserToDeleteRows = false;
+            PartsDataGrid.AllowUserToResizeColumns = false;
+            PartsDataGrid.AllowUserToResizeRows = false;
+            PartsDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            PartsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            PartsDataGrid.Location = new Point(12, 114);
+            PartsDataGrid.MultiSelect = false;
+            PartsDataGrid.Name = "PartsDataGrid";
+            PartsDataGrid.ReadOnly = true;
+            PartsDataGrid.Size = new Size(562, 248);
+            PartsDataGrid.TabIndex = 17;
             // 
-            // dataGridView2
+            // ProductsDataGrid
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(618, 114);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(562, 248);
-            dataGridView2.TabIndex = 18;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            ProductsDataGrid.AllowUserToAddRows = false;
+            ProductsDataGrid.AllowUserToDeleteRows = false;
+            ProductsDataGrid.AllowUserToResizeColumns = false;
+            ProductsDataGrid.AllowUserToResizeRows = false;
+            ProductsDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ProductsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ProductsDataGrid.Location = new Point(618, 114);
+            ProductsDataGrid.MultiSelect = false;
+            ProductsDataGrid.Name = "ProductsDataGrid";
+            ProductsDataGrid.ReadOnly = true;
+            ProductsDataGrid.Size = new Size(562, 248);
+            ProductsDataGrid.TabIndex = 18;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Snow;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(12, 512);
             label1.Name = "label1";
             label1.Size = new Size(266, 32);
             label1.TabIndex = 19;
             label1.Text = "Austin Marsh C968 Task";
-            label1.Click += label1_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(570, 368);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(177, 194);
-            pictureBox1.TabIndex = 20;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Snow;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(420, 9);
             label4.Name = "label4";
             label4.Size = new Size(348, 32);
             label4.TabIndex = 21;
             label4.Text = "Inventory Management System";
-            label4.Click += label4_Click;
             // 
             // clearPartSearch
             // 
@@ -249,7 +240,6 @@ namespace WGUC968
             clearPartSearch.TabIndex = 23;
             clearPartSearch.Text = "Clear";
             clearPartSearch.UseVisualStyleBackColor = true;
-            clearPartSearch.Click += clearPartSearch_Click;
             // 
             // clearProductSearch
             // 
@@ -259,80 +249,59 @@ namespace WGUC968
             clearProductSearch.TabIndex = 24;
             clearProductSearch.Text = "Clear";
             clearProductSearch.UseVisualStyleBackColor = true;
-            clearProductSearch.Click += clearProductSearch_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Bahnschrift Condensed", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(710, 405);
-            label5.Name = "label5";
-            label5.Size = new Size(68, 99);
-            label5.TabIndex = 25;
-            label5.Text = "GO\r\nNIGHT\r\nOWLS!";
-            label5.Click += label5_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1190, 556);
-            Controls.Add(label5);
             Controls.Add(clearProductSearch);
             Controls.Add(clearPartSearch);
             Controls.Add(label4);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(ProductsDataGrid);
+            Controls.Add(PartsDataGrid);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(partSearchBox);
             Controls.Add(productSearchButton);
             Controls.Add(partSearchButton);
             Controls.Add(productSearchBox);
-            Controls.Add(button7);
+            Controls.Add(ExitButton);
             Controls.Add(deleteProductButton);
-            Controls.Add(button4);
-            Controls.Add(button6);
-            Controls.Add(deletePartButton);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(ModifyProductButton);
+            Controls.Add(AddProductButton);
+            Controls.Add(DeletePartButton);
+            Controls.Add(ModifyPartButton);
+            Controls.Add(AddPartButton);
             Name = "MainForm";
             Text = "Inventory Management System Main Screen";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PartsDataGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ProductsDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button deletePartButton;
-        private Button button6;
-        private Button button4;
+        private Button AddPartButton;
+        private Button ModifyPartButton;
+        private Button DeletePartButton;
+        private Button AddProductButton;
+        private Button ModifyProductButton;
         private Button deleteProductButton;
-        private Button button7;
+        private Button ExitButton;
         private TextBox productSearchBox;
         private Button partSearchButton;
         private Button productSearchButton;
         private TextBox partSearchBox;
         private Label label2;
         private Label label3;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView PartsDataGrid;
+        private DataGridView ProductsDataGrid;
         private Label label1;
-        private PictureBox pictureBox1;
         private Label label4;
         private Button clearPartSearch;
         private Button clearProductSearch;
-        private Label label5;
     }
 }

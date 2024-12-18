@@ -30,8 +30,8 @@
         {
             label11 = new Label();
             button2 = new Button();
-            button1 = new Button();
-            label8 = new Label();
+            CancelButton = new Button();
+            inOrOutLabel = new Label();
             minBox = new TextBox();
             label7 = new Label();
             label6 = new Label();
@@ -63,32 +63,30 @@
             button2.Location = new Point(308, 406);
             button2.Name = "button2";
             button2.Size = new Size(83, 58);
-            button2.TabIndex = 42;
+            button2.TabIndex = 8;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
-            // button1
+            // CancelButton
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(397, 406);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 58);
-            button1.TabIndex = 41;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            CancelButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CancelButton.Location = new Point(397, 406);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(83, 58);
+            CancelButton.TabIndex = 9;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
-            // label8
+            // inOrOutLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(82, 321);
-            label8.Name = "label8";
-            label8.Size = new Size(88, 21);
-            label8.TabIndex = 38;
-            label8.Text = "Machine ID";
-            label8.Click += label8_Click;
+            inOrOutLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            inOrOutLabel.Location = new Point(46, 321);
+            inOrOutLabel.Name = "inOrOutLabel";
+            inOrOutLabel.Size = new Size(158, 21);
+            inOrOutLabel.TabIndex = 38;
+            inOrOutLabel.Text = "Machine ID";
+            inOrOutLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // minBox
             // 
@@ -96,8 +94,7 @@
             minBox.Location = new Point(210, 283);
             minBox.Name = "minBox";
             minBox.Size = new Size(56, 29);
-            minBox.TabIndex = 37;
-            minBox.TextChanged += minBox_TextChanged;
+            minBox.TabIndex = 3;
             // 
             // label7
             // 
@@ -165,8 +162,7 @@
             maxBox.Location = new Point(320, 283);
             maxBox.Name = "maxBox";
             maxBox.Size = new Size(56, 29);
-            maxBox.TabIndex = 30;
-            maxBox.TextChanged += maxBox_TextChanged;
+            maxBox.TabIndex = 4;
             // 
             // machineOrCompanyBox
             // 
@@ -174,8 +170,7 @@
             machineOrCompanyBox.Location = new Point(210, 318);
             machineOrCompanyBox.Name = "machineOrCompanyBox";
             machineOrCompanyBox.Size = new Size(166, 29);
-            machineOrCompanyBox.TabIndex = 29;
-            machineOrCompanyBox.TextChanged += machineOrCompanyBox_TextChanged;
+            machineOrCompanyBox.TabIndex = 5;
             // 
             // priceBox
             // 
@@ -183,8 +178,7 @@
             priceBox.Location = new Point(210, 248);
             priceBox.Name = "priceBox";
             priceBox.Size = new Size(166, 29);
-            priceBox.TabIndex = 28;
-            priceBox.TextChanged += priceBox_TextChanged;
+            priceBox.TabIndex = 2;
             // 
             // inventoryBox
             // 
@@ -192,8 +186,7 @@
             inventoryBox.Location = new Point(210, 213);
             inventoryBox.Name = "inventoryBox";
             inventoryBox.Size = new Size(166, 29);
-            inventoryBox.TabIndex = 27;
-            inventoryBox.TextChanged += inventoryBox_TextChanged;
+            inventoryBox.TabIndex = 1;
             // 
             // nameBox
             // 
@@ -201,8 +194,7 @@
             nameBox.Location = new Point(210, 178);
             nameBox.Name = "nameBox";
             nameBox.Size = new Size(166, 29);
-            nameBox.TabIndex = 26;
-            nameBox.TextChanged += nameBox_TextChanged;
+            nameBox.TabIndex = 0;
             // 
             // idBox
             // 
@@ -210,8 +202,7 @@
             idBox.Location = new Point(210, 143);
             idBox.Name = "idBox";
             idBox.Size = new Size(166, 29);
-            idBox.TabIndex = 25;
-            idBox.TextChanged += idBox_TextChanged;
+            idBox.TabIndex = 16;
             // 
             // outsourcedRadioButton
             // 
@@ -220,24 +211,24 @@
             outsourcedRadioButton.Location = new Point(289, 96);
             outsourcedRadioButton.Name = "outsourcedRadioButton";
             outsourcedRadioButton.Size = new Size(109, 25);
-            outsourcedRadioButton.TabIndex = 24;
-            outsourcedRadioButton.TabStop = true;
+            outsourcedRadioButton.TabIndex = 7;
             outsourcedRadioButton.Text = "Outsourced";
             outsourcedRadioButton.UseVisualStyleBackColor = true;
-            outsourcedRadioButton.CheckedChanged += radioButton2_CheckedChanged;
+            outsourcedRadioButton.CheckedChanged += outsourcedRadioButton_CheckedChanged;
             // 
             // inHouseRadioButton
             // 
             inHouseRadioButton.AutoSize = true;
+            inHouseRadioButton.Checked = true;
             inHouseRadioButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             inHouseRadioButton.Location = new Point(175, 96);
             inHouseRadioButton.Name = "inHouseRadioButton";
             inHouseRadioButton.Size = new Size(91, 25);
-            inHouseRadioButton.TabIndex = 23;
+            inHouseRadioButton.TabIndex = 6;
             inHouseRadioButton.TabStop = true;
             inHouseRadioButton.Text = "In-House";
             inHouseRadioButton.UseVisualStyleBackColor = true;
-            inHouseRadioButton.CheckedChanged += radioButton1_CheckedChanged;
+            inHouseRadioButton.CheckedChanged += inHouseRadioButton_CheckedChanged;
             // 
             // label1
             // 
@@ -257,8 +248,8 @@
             Controls.Add(label1);
             Controls.Add(label11);
             Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label8);
+            Controls.Add(CancelButton);
+            Controls.Add(inOrOutLabel);
             Controls.Add(minBox);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -276,7 +267,6 @@
             Controls.Add(inHouseRadioButton);
             Name = "AddPart";
             Text = "Add Part";
-            Load += AddPart_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,8 +275,8 @@
 
         private Label label11;
         private Button button2;
-        private Button button1;
-        private Label label8;
+        private Button CancelButton;
+        private Label inOrOutLabel;
         private TextBox minBox;
         private Label label7;
         private Label label6;
