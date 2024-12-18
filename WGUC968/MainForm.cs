@@ -24,7 +24,6 @@ namespace WGUC968
             Inventory.AllParts.Add(new Inhouse { MachineID = 5, InStock = 474, Max = 2500, Min = 1, Name = "strut", Price = 8.50m, PartID = Inventory.PartIDCalculation() });
             Inventory.AllParts.Add(new Outsourced { CompanyName = "Test2", InStock = 742, Max = 7500, Min = 1, Name = "bolt", Price = 0.95m, PartID = Inventory.PartIDCalculation() });
             Inventory.AllParts.Add(new Inhouse { MachineID = 10, InStock = 236, Max = 2500, Min = 1, Name = "wire", Price = 8.50m, PartID = Inventory.PartIDCalculation() });
-            Inventory.AllParts.Add(new Outsourced { CompanyName = "Test3", InStock = 125, Max = 1250, Min = 1, Name = "shim", Price = 1.95m, PartID = Inventory.PartIDCalculation() });
             Inventory.AllParts.Add(new Inhouse { MachineID = 15, InStock = 215, Max = 2500, Min = 1, Name = "bearing", Price = 4.25m, PartID = Inventory.PartIDCalculation() });
 
             //products grid settings
@@ -35,7 +34,6 @@ namespace WGUC968
             //create default products list?...
             Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "hub", 44, 35.00m, 1, 99));
             Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "axle", 26, 15.00m, 1, 99));
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "post", 322, 25.00m, 1, 99));
             Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "chain", 252, 12.00m, 1, 99));
             Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "sprocket", 346, 8.00m, 1, 99));
             Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "clamp", 124, 14.00m, 1, 99));

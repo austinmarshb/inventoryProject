@@ -100,15 +100,17 @@ namespace WGUC968
             candidatePartsGrid.AllowUserToDeleteRows = false;
             candidatePartsGrid.AllowUserToResizeColumns = false;
             candidatePartsGrid.AllowUserToResizeRows = false;
+            candidatePartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             candidatePartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             candidatePartsGrid.Location = new Point(345, 101);
             candidatePartsGrid.Name = "candidatePartsGrid";
-            candidatePartsGrid.Size = new Size(660, 140);
+            candidatePartsGrid.ReadOnly = true;
+            candidatePartsGrid.Size = new Size(660, 173);
             candidatePartsGrid.TabIndex = 74;
             // 
             // button2
             // 
-            button2.Location = new Point(941, 478);
+            button2.Location = new Point(643, 509);
             button2.Name = "button2";
             button2.Size = new Size(64, 46);
             button2.TabIndex = 73;
@@ -117,7 +119,7 @@ namespace WGUC968
             // 
             // button1
             // 
-            button1.Location = new Point(941, 247);
+            button1.Location = new Point(643, 280);
             button1.Name = "button1";
             button1.Size = new Size(64, 46);
             button1.TabIndex = 72;
@@ -238,10 +240,12 @@ namespace WGUC968
             associatedPartsGrid.AllowUserToDeleteRows = false;
             associatedPartsGrid.AllowUserToResizeColumns = false;
             associatedPartsGrid.AllowUserToResizeRows = false;
+            associatedPartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             associatedPartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             associatedPartsGrid.Location = new Point(345, 332);
             associatedPartsGrid.Name = "associatedPartsGrid";
-            associatedPartsGrid.Size = new Size(660, 140);
+            associatedPartsGrid.ReadOnly = true;
+            associatedPartsGrid.Size = new Size(660, 171);
             associatedPartsGrid.TabIndex = 59;
             // 
             // label1

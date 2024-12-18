@@ -73,10 +73,12 @@ namespace WGUC968
             associatedPartsGrid.AllowUserToDeleteRows = false;
             associatedPartsGrid.AllowUserToResizeColumns = false;
             associatedPartsGrid.AllowUserToResizeRows = false;
+            associatedPartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             associatedPartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            associatedPartsGrid.Location = new Point(345, 333);
+            associatedPartsGrid.Location = new Point(345, 330);
             associatedPartsGrid.Name = "associatedPartsGrid";
-            associatedPartsGrid.Size = new Size(661, 140);
+            associatedPartsGrid.ReadOnly = true;
+            associatedPartsGrid.Size = new Size(661, 173);
             associatedPartsGrid.TabIndex = 5;
             // 
             // minBox
@@ -189,21 +191,23 @@ namespace WGUC968
             // 
             // button1
             // 
-            button1.Location = new Point(942, 248);
+            button1.Location = new Point(643, 278);
             button1.Name = "button1";
             button1.Size = new Size(64, 46);
             button1.TabIndex = 50;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(942, 479);
+            button2.Location = new Point(643, 509);
             button2.Name = "button2";
             button2.Size = new Size(64, 46);
             button2.TabIndex = 51;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // candidatePartsGrid
             // 
@@ -211,10 +215,12 @@ namespace WGUC968
             candidatePartsGrid.AllowUserToDeleteRows = false;
             candidatePartsGrid.AllowUserToResizeColumns = false;
             candidatePartsGrid.AllowUserToResizeRows = false;
+            candidatePartsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             candidatePartsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             candidatePartsGrid.Location = new Point(345, 102);
             candidatePartsGrid.Name = "candidatePartsGrid";
-            candidatePartsGrid.Size = new Size(661, 140);
+            candidatePartsGrid.ReadOnly = true;
+            candidatePartsGrid.Size = new Size(661, 170);
             candidatePartsGrid.TabIndex = 6;
             // 
             // searchBox
@@ -254,6 +260,7 @@ namespace WGUC968
             button5.TabIndex = 8;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // label8
             // 
