@@ -81,7 +81,7 @@ namespace WGUC968
 
                     if (selectedPart != null)
                     {
-                        Inventory.DeletePart(selectedPart);
+                        Inventory.deletePart(selectedPart);
                     }
                     else
                     {
@@ -110,7 +110,7 @@ namespace WGUC968
 
                     if (selectedProduct != null)
                     {
-                        Inventory.RemoveProduct(selectedProduct);
+                        Inventory.removeProduct(selectedProduct);
                     }
                     else
                     {
@@ -249,8 +249,9 @@ namespace WGUC968
 
             cm.ResumeBinding();
 
-            if (productSearchBox.Text == "")
+            if (productSearchBox.Text == "" || productSearchBox.Text == null)
             {
+                MessageBox.Show("Please enter Product ID or Product Name to search.");
                 foreach (DataGridViewRow row in ProductsDataGrid.Rows)
                 {
                     row.Visible = true;

@@ -28,43 +28,78 @@ namespace WGUC968.Classes
             get { return parts; }
         }
 
-        public static void AddProduct(Product product)
+        public static void addProduct(Product product)
         {
-            Inventory.Products.Add(product);
+            Products.Add(product);
         }
 
-        public static bool RemoveProduct(int productID)
+        public static bool removeProduct(int productID)
         {
             Products.RemoveAt(productID);
             return true;
         }
 
-        //public static Product LookupProduct(int productID)
-        //{
-        //}
-
-        //public static void updateProduct(int index, Product product)
-        //{
-        //}
-
-        public static void AddPart(Part part)
+        public static Product lookupProduct(int id)
         {
-            Inventory.AllParts.Add(part);
+            Product product = null;
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (id == Products[i].ProductID)
+                {
+                    _ = products[i];
+                }
+            }
+            return product;
         }
 
-        public static bool DeletePart(Part part)
+        public static void updateProduct(int id, Product product)
+        {
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (id == Products[i].ProductID)
+                {
+                    removeProduct(id);
+                }
+                addProduct(product);
+            }
+        }
+
+        public static void addPart(Part part)
+        {
+            AllParts.Add(part);
+        }
+
+        public static bool deletePart(Part part)
         {
             AllParts.Remove(part);
             return true;
         }
 
-        //public static Part lookupPart(int partID)
-        //{
-        //}
+        public static Part lookupPart(int id)
+        {
+            Part part = null;
+            for (int i = 0; i < AllParts.Count; i++)
+            {
+                if (id == AllParts[i].PartID)
+                {
+                    _ = AllParts[i];
+                }
+            }
+            return part;
 
-        //public static void updatePart(int index, Part part)
-        //{
-        //}
+        }
+
+        public static void updatePart(int id, Part part)
+        {
+            for (int i = 0; i < AllParts.Count; i++)
+            {
+                if (id == AllParts[i].PartID)
+                {
+                    deletePart(AllParts[i]);
+                }
+                addPart(part);
+            }
+        }
 
         public static int PartIDCalculation()
         {

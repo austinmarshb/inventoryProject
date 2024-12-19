@@ -80,12 +80,12 @@ namespace WGUC968
             if (inHouseRadioButton.Checked)
             {
                 machineID = int.Parse(machineOrCompanyBox.Text);
-                Inventory.AddPart(new Inhouse { MachineID = machineID, InStock = inventory, Max = max, Min = min, Name = name, Price = price, PartID = Inventory.PartIDCalculation() });
+                Inventory.addPart(new Inhouse { MachineID = machineID, InStock = inventory, Max = max, Min = min, Name = name, Price = price, PartID = Inventory.PartIDCalculation() });
             }
             else
             {
                 string companyName = nameBox.Text;
-                Inventory.AddPart(new Outsourced { CompanyName = companyName, InStock = inventory, Max = max, Min = min, Name = name, Price = price, PartID = Inventory.PartIDCalculation() });
+                Inventory.addPart(new Outsourced { CompanyName = companyName, InStock = inventory, Max = max, Min = min, Name = name, Price = price, PartID = Inventory.PartIDCalculation() });
             }
             Close();
         }

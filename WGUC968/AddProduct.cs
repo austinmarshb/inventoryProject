@@ -78,7 +78,7 @@ namespace WGUC968
                     return;
                 }
 
-                Inventory.AddProduct(new Product(
+                Inventory.addProduct(new Product(
                     Inventory.ProductIDCalculation(),
                     name,
                     inventory,
