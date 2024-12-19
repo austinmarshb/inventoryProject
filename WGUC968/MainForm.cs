@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.Windows.Forms;
 using WGUC968.Classes;
 
 namespace WGUC968
@@ -52,9 +53,23 @@ namespace WGUC968
 
         private void ModifyPartButton_Click(object sender, EventArgs e)
         {
-            ModifyPart modifypart = new ModifyPart();
-            modifypart.Show();
+            if (PartsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = PartsDataGrid.SelectedRows[0];
+
+                int selectedPartID = (int)selectedRow.Cells[0].Value;
+
+                Part selectedPart = Inventory.AllParts.FirstOrDefault(p => p.PartID == selectedPartID);
+
+                if (selectedPart != null)
+                {
+                    ModifyPart modifyForm = new ModifyPart(PartsDataGrid);
+                    modifyForm.PopulateForm(selectedPart);
+                    modifyForm.Show();
+                }
+            }
         }
+
 
         private void AddProductButton_Click(object sender, EventArgs e)
         {
@@ -268,6 +283,10 @@ namespace WGUC968
             {
                 row.Visible = true;
             }
+        }
+        public void RefreshPartsDataGrid()
+        {
+            PartsDataGrid.Refresh(); // This will refresh the DataGridView
         }
     }
 }

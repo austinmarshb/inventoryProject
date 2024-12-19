@@ -229,6 +229,7 @@ namespace WGUC968
             button2.TabIndex = 8;
             button2.Text = "Save";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label11
             // 
@@ -280,6 +281,7 @@ namespace WGUC968
             Controls.Add(inHouseRadioButton);
             Name = "ModifyPart";
             Text = "Modify Part";
+            Load += ModifyPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }
