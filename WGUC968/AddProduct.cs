@@ -37,7 +37,61 @@ namespace WGUC968
         //this is the SEARCH button
         private void button3_Click(object sender, EventArgs e)
         {
+            CurrencyManager cm = (CurrencyManager)BindingContext[candidatePartsGrid.DataSource];
+            cm.SuspendBinding();
 
+            bool isNumber = int.TryParse(searchBox.Text, out int searchID);
+
+            if (isNumber)
+            {
+                for (int i = 0; i < Inventory.AllParts.Count; i++)
+                {
+                    if ((isNumber && searchID == Inventory.AllParts[i].PartID))
+                    {
+                        candidatePartsGrid.Rows[i].Visible = true;
+                        //PartsDataGrid.Rows[i].Selected = true;
+                    }
+                    else
+                    {
+                        candidatePartsGrid.Rows[i].Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                {
+                    var userSearch = searchBox.Text;
+                    for (int i = 0; i < Inventory.AllParts.Count; i++)
+                    {
+                        if (userSearch == Inventory.AllParts[i].Name.ToLower())
+                        {
+                            candidatePartsGrid.Rows[i].Visible = true;
+                        }
+                        else
+                        {
+                            candidatePartsGrid.Rows[i].Visible = false;
+                        }
+                    }
+                }
+            }
+
+            cm.ResumeBinding();
+
+            if (searchBox.Text == "" || searchBox == null)
+            {
+                MessageBox.Show("Please enter PartID or Part Name to search.");
+                foreach (DataGridViewRow row in candidatePartsGrid.Rows)
+                {
+                    row.Visible = true;
+                }
+            }
+
+            //for (int j = 0; j < Inventory.AllParts.Count; j++)
+            //{
+            //    if (partSearchBox.Text != Inventory.AllParts[j].PartID.ToString())
+            //    {
+            //        PartsDataGrid.Rows[j].
+            //    }
         }
 
         //this is the save button <--------------------------------
@@ -120,6 +174,17 @@ namespace WGUC968
                     candidatePartsGrid.ClearSelection();
                     associatedPartsGrid.ClearSelection();
                 }
+            }
+        }
+
+        //clear search button
+        private void button4_Click(object sender, EventArgs e)
+        {
+            candidatePartsGrid.ClearSelection();
+            searchBox.Text = "";
+            foreach (DataGridViewRow row in candidatePartsGrid.Rows)
+            {
+                row.Visible = true;
             }
         }
     }

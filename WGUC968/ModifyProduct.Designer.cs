@@ -53,6 +53,8 @@ namespace WGUC968
             label1 = new Label();
             label8 = new Label();
             label9 = new Label();
+            button4 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)candidatePartsGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)associatedPartsGrid).BeginInit();
             SuspendLayout();
@@ -80,17 +82,18 @@ namespace WGUC968
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(645, 33);
+            button3.Location = new Point(645, 48);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 76;
             button3.Text = "Search";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // searchBox
             // 
             searchBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchBox.Location = new Point(726, 29);
+            searchBox.Location = new Point(726, 44);
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(166, 29);
             searchBox.TabIndex = 5;
@@ -117,6 +120,7 @@ namespace WGUC968
             button2.TabIndex = 73;
             button2.Text = "Delete";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -126,6 +130,7 @@ namespace WGUC968
             button1.TabIndex = 72;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // minBox
             // 
@@ -277,11 +282,32 @@ namespace WGUC968
             label9.TabIndex = 80;
             label9.Text = "All parts associated with this product";
             // 
+            // button4
+            // 
+            button4.Location = new Point(898, 48);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 81;
+            button4.Text = "Clear";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(960, 99);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 23);
+            button6.TabIndex = 82;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
             // ModifyProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1024, 626);
+            Controls.Add(button6);
+            Controls.Add(button4);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button5);
@@ -338,5 +364,7 @@ namespace WGUC968
         private Label label1;
         private Label label8;
         private Label label9;
+        private Button button4;
+        private Button button6;
     }
 }

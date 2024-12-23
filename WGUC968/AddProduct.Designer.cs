@@ -53,6 +53,7 @@ namespace WGUC968
             button5 = new Button();
             label8 = new Label();
             label9 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)associatedPartsGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)candidatePartsGrid).BeginInit();
             SuspendLayout();
@@ -226,7 +227,7 @@ namespace WGUC968
             // searchBox
             // 
             searchBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            searchBox.Location = new Point(727, 30);
+            searchBox.Location = new Point(726, 44);
             searchBox.Name = "searchBox";
             searchBox.Size = new Size(166, 29);
             searchBox.TabIndex = 7;
@@ -234,7 +235,7 @@ namespace WGUC968
             // button3
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(646, 34);
+            button3.Location = new Point(645, 48);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 55;
@@ -280,11 +281,22 @@ namespace WGUC968
             label9.TabIndex = 59;
             label9.Text = "All parts associated with this product";
             // 
+            // button4
+            // 
+            button4.Location = new Point(898, 48);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 60;
+            button4.Text = "Clear";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // AddProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1024, 626);
+            Controls.Add(button4);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button5);
@@ -341,5 +353,6 @@ namespace WGUC968
         private Button button5;
         private Label label8;
         private Label label9;
+        private Button button4;
     }
 }

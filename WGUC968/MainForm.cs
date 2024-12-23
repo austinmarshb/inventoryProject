@@ -33,11 +33,11 @@ namespace WGUC968
             ProductsDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             //create default products list?...
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "hub", 44, 35.00m, 1, 99));
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "axle", 26, 15.00m, 1, 99));
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "chain", 252, 12.00m, 1, 99));
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "sprocket", 346, 8.00m, 1, 99));
-            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "clamp", 124, 14.00m, 1, 99));
+            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "hub", 44, 35.00m, 1, 600));
+            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "axle", 26, 15.00m, 1, 950));
+            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "chain", 252, 12.00m, 1, 1200));
+            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "sprocket", 346, 8.00m, 1, 1450));
+            Inventory.Products.Add(new Product(Inventory.ProductIDCalculation(), "clamp", 124, 14.00m, 1, 3000));
 
         }
         private void ExitButton_Click(object sender, EventArgs e)
