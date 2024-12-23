@@ -34,7 +34,6 @@ namespace WGUC968
 
         public void PopulateForm(Part selectedPart)
         {
-            // Assuming selectedPart is an instance of either InhousePart or OutsourcedPart
             idBox.Text = selectedPart.PartID.ToString();
             nameBox.Text = selectedPart.Name;
             inventoryBox.Text = selectedPart.InStock.ToString();
@@ -42,7 +41,6 @@ namespace WGUC968
             maxBox.Text = selectedPart.Max.ToString();
             minBox.Text = selectedPart.Min.ToString();
 
-            // Depending on whether it's an InhousePart or OutsourcedPart, set the relevant fields
             if (selectedPart is Inhouse InHouse)
             {
                 inHouseRadioButton.Checked = true;
@@ -107,49 +105,42 @@ namespace WGUC968
         }
                 private bool isValid()
         {
-            // Check if Inventory is a valid number
             if (!int.TryParse(inventoryBox.Text, out int inventory) || inventory < 0)
             {
                 MessageBox.Show("Please enter a valid Inventory.");
                 return false;
             }
 
-            // Check if Price/Cost is a valid decimal number
             if (!decimal.TryParse(priceBox.Text, out decimal price) || price < 0)
             {
                 MessageBox.Show("Please enter a valid Price/Cost.");
                 return false;
             }
 
-            // Check if Max is a valid number
             if (!int.TryParse(maxBox.Text, out int max) || max < 0)
             {
                 MessageBox.Show("Please enter a valid Max.");
                 return false;
             }
 
-            // Check if Min is a valid number
             if (!int.TryParse(minBox.Text, out int min) || min < 0)
             {
                 MessageBox.Show("Please enter a valid Min.");
                 return false;
             }
 
-            // Check if Min is less than Max
             if (min >= max)
             {
                 MessageBox.Show("Min must be less than Max.");
                 return false;
             }
 
-            // Check if Inventory is within Min/Max range
             if (inventory < min || inventory > max)
             {
                 MessageBox.Show("Inventory must be between Min and Max.");
                 return false;
             }
 
-            // If the part is in-house, ensure Machine ID is valid
             if (inHouseRadioButton.Checked)
             {
                 if (!int.TryParse(machineOrCompanyBox.Text, out int machineID) || machineID < 0)
@@ -158,7 +149,6 @@ namespace WGUC968
                     return false;
                 }
             }
-            // If the part is outsourced, ensure Company Name is not empty
             else if (outsourcedRadioButton.Checked)
             {
                 if (string.IsNullOrEmpty(machineOrCompanyBox.Text))

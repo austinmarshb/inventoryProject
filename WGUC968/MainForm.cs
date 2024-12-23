@@ -79,8 +79,20 @@ namespace WGUC968
 
         private void ModifyProductButton_Click(object sender, EventArgs e)
         {
-            ModifyProduct modifyproduct = new ModifyProduct();
-            modifyproduct.Show();
+            if (ProductsDataGrid.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = ProductsDataGrid.SelectedRows[0];
+
+                int selectedProductID = (int)selectedRow.Cells[0].Value;
+
+                Product selectedProduct = Inventory.Products.FirstOrDefault(p => p.ProductID == selectedProductID);
+                if (selectedProduct != null)
+                {
+                    ModifyProduct modifyForm = new ModifyProduct(ProductsDataGrid);
+                    modifyForm.PopulateForm(selectedProduct);
+                    modifyForm.Show();
+                }
+            }
         }
 
         //feed this data to modify form?

@@ -65,6 +65,7 @@ namespace WGUC968
             button5.TabIndex = 78;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // CancelButton
             // 
